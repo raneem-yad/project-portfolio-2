@@ -18,8 +18,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
     <link rel="icon" type="image/png" href="assets/images/favicon/favicon.icox">
-    <!-- css -->
     
+    <!-- font awesome and google font -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+    
+    <!-- css -->
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Bazinga</title>
 </head>
@@ -33,13 +37,26 @@
 
     <section>
         <!-- game rules -->
-        <div id="game-rules"></div>
+        <div id="game-rules">
+            <h2>Game Rules</h2>
+            <p>"Scissors cuts paper, paper covers rock, rock crushes Lizard, Lizard poisons Spock, Spock smashes scissors, scissors decapitates Lizard, Lizard eats paper, paper disproves Spock, Spock vaperizes rock, and as it always has, rock crushes scissors.
+                "</p>
+            <span>Sheldon Cooper</span>
+        </div>
 
         <!-- game preview -->
-        <div id="game-preview"></div>
+        <div id="game-preview">
+
+        </div>
 
         <!-- game registration -->
-        <div id="game-registration"></div>
+        <div id="game-registration">
+            <form action="play.html" method="get">
+                <input type="text" name="player-name" id="player" placeholder="Player Name" required>
+                <input type="number" name="player-age" id="age" placeholder="Player Age" required>
+                <input type="button" value="Play">
+            </form>
+        </div>
     </section>
 
     
