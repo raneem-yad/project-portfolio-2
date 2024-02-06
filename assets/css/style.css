@@ -61,3 +61,39 @@ blockquote p::after {
 }
 /* registration form */
 
+.text-input {
+    background: transparent;
+    color: #007084;
+    height: 30px;
+    margin: 5px 0 20px 0;
+    min-width: -webkit-fill-available;
+    border: 1px solid #0097b2;
+    border-radius: 2px;
+    padding: 0 5px;
+}
+
+
+
+input::placeholder {
+    color: #007084;
+    font-style: italic;
+    font-family: "Exo 2", sans-serif;
+    text-align: center;
+}
+
+.btn-play {
+    background-color: #0097b2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 5px 5px 10px rgba(0, 151, 178, 0.5);
+}
+
