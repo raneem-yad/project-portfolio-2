@@ -1,0 +1,53 @@
+/* --------- Global style */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Primary : #0098b0 */
+body {
+    background-color: white;
+    font-family: "Exo 2", sans-serif;
+    color: #445361;
+    text-align: center;
+    padding: 10px;
+}
+
+h2{
+    font-family: "Orbitron", sans-serif;
+    margin-bottom: 5px;
+}
+
+/* Home content  */
+#logo {
+    width: 250px;
+}
+/* game rules  */
+blockquote p {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+blockquote p::before {
+    content: '\201C';
+}
+
+blockquote p::after {
+    content: '\201D';
+}
+
+/* game-preview */
+#game-preview {
+    margin: 20px 0;
+}
+
+.circle {
+    border: 4px dashed #445361;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 0.6rem;
+}
+.circle > i {
+    font-size: 3rem;
+}
+

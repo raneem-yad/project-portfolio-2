@@ -20,7 +20,7 @@
     <link rel="icon" type="image/png" href="assets/images/favicon/favicon.icox">
     
     <!-- google font -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,400;0,700;1,200&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- css -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -29,22 +29,26 @@
 <body>
     <!-- logo area -->
     <div>
-        <img src="assets/images/logo.webp" alt="website logo" >
+        <img id="logo" src="assets/images/logo.webp" alt="website logo" >
     </div>
 
     <!-- welcome to Game area -->
 
-    <section>
+    <section id="home">
         <!-- game rules -->
         <div id="game-rules">
+
             <h2>Game Rules</h2>
-            <p>"Scissors cuts paper, paper covers rock, rock crushes Lizard, Lizard poisons Spock, Spock smashes scissors, scissors decapitates Lizard, Lizard eats paper, paper disproves Spock, Spock vaperizes rock, and as it always has, rock crushes scissors.
-                "</p>
-            <span>Sheldon Cooper</span>
+            <blockquote cite="https://www.imdb.com/title/tt2220955/characters/nm0101152">
+                <p>Scissors cuts paper, paper covers rock, rock crushes Lizard, Lizard poisons Spock, Spock smashes scissors, scissors decapitates Lizard, Lizard eats paper, paper disproves Spock, Spock vaperizes rock, and as it always has, rock crushes scissors.
+                </p>
+                <footer> -Scheldon Cooper, <cite>The Big Bang Theory</cite></footer>
+            </blockquote>
         </div>
 
         <!-- game preview -->
         <div id="game-preview">
+            <h2>Game Preview</h2>
             <div class="circle">
                 <i class="fa-solid fa-hand"></i>
             </div>
@@ -65,6 +69,7 @@
 
         <!-- game registration -->
         <div id="game-registration">
+            <h2>Registration</h2>
             <form action="play.html" method="get">
                 <input type="text" name="player-name" id="player" placeholder="Player Name" required>
                 <input type="number" name="player-age" id="age" placeholder="Player Age" required>
