@@ -41,13 +41,23 @@ blockquote p::after {
     margin: 20px 0;
 }
 
+#circles {
+    margin: 5px 0;
+}
 .circle {
     border: 4px dashed #445361;
     border-radius: 50px;
     display: inline-block;
     padding: 0.6rem;
+    transition: all 1s ease;
 }
 .circle > i {
     font-size: 3rem;
 }
+
+.circle:hover{
+    background-color: #445361;
+    color: #fff;
+}
+/* registration form */
 
