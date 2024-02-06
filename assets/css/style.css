@@ -1,29 +1,43 @@
 /* --------- Global style */
-*{
+* {
     margin: 0;
     padding: 0;
 }
+
 /* Primary : #0098b0 */
 body {
     background-color: white;
     font-family: "Exo 2", sans-serif;
     color: #445361;
     text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-h2{
+h2 {
     font-family: "Orbitron", sans-serif;
     margin-bottom: 5px;
 }
 
 /* Home content  */
+main {
+    flex: 1 0 auto;
+    /* margin-top: 47px; */
+    /* background: linear-gradient(45deg, #e1f3e1, transparent); */
+    /* Enable flex properties for child elements */
+    display: flex;
+    flex-direction: column;
+}
+
 #logo {
     width: 250px;
 }
 
-#home{
+#home {
     padding: 10px;
 }
+
 /* game rules  */
 blockquote p {
     padding: 8px;
@@ -47,6 +61,7 @@ blockquote p::after {
 #circles {
     margin: 5px 0;
 }
+
 .circle {
     border: 4px dashed #445361;
     border-radius: 50px;
@@ -54,14 +69,16 @@ blockquote p::after {
     padding: 0.6rem;
     transition: all 1s ease;
 }
-.circle > i {
+
+.circle>i {
     font-size: 3rem;
 }
 
-.circle:hover{
+.circle:hover {
     background-color: #445361;
     color: #fff;
 }
+
 /* registration form */
 
 .text-input {
@@ -104,6 +121,7 @@ input::placeholder {
     /* transition: background-color 0.3s ease; */
     /* box-shadow: 5px 5px 10px rgba(0, 151, 178, 0.5);*/
 }
+
 .btn-play:hover {
     background-color: #445361;
     color: #fff;
@@ -115,3 +133,40 @@ input::placeholder {
     background-color: #445361;
 }
 
+/* adding media-query */
+@media screen and (min-width: 768px) {
+    #home {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #game-rules {
+        width: 45%;
+    }
+
+    #game-preview {
+        flex: 1 0 auto;
+        order: 1;
+    }
+
+    #game-registration {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #game-rules {
+        width: 33.3%;
+    }
+
+    #game-preview {
+        order: unset;
+    }
+
+    #game-registration {
+        width: 33.3%;
+    }
+}
