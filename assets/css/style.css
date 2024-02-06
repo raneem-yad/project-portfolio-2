@@ -9,7 +9,6 @@ body {
     font-family: "Exo 2", sans-serif;
     color: #445361;
     text-align: center;
-    padding: 10px;
 }
 
 h2{
@@ -20,6 +19,10 @@ h2{
 /* Home content  */
 #logo {
     width: 250px;
+}
+
+#home{
+    padding: 10px;
 }
 /* game rules  */
 blockquote p {
@@ -82,18 +85,33 @@ input::placeholder {
 }
 
 .btn-play {
-    background-color: #0097b2;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    text-transform: uppercase;
+    background-color: #fff;
+    font-family: "Orbitron", sans-serif;
+    color: #445361;
+    border: 4px dashed #445361;
+    font-style: italic;
     font-weight: bold;
-    letter-spacing: 1px;
-    text-align: center;
+    padding: 2px 40px;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    transition: all 1s ease;
+    /* text-transform: uppercase; */
+    /* font-weight: bold; */
+    /* letter-spacing: 1px; */
+    /* text-align: center; */
     cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    box-shadow: 5px 5px 10px rgba(0, 151, 178, 0.5);
+    /* text-decoration: none; */
+    /* transition: background-color 0.3s ease; */
+    /* box-shadow: 5px 5px 10px rgba(0, 151, 178, 0.5);*/
+}
+.btn-play:hover {
+    background-color: #445361;
+    color: #fff;
+}
+
+.footer {
+    padding: 10px;
+    color: #fff;
+    background-color: #445361;
 }
 
