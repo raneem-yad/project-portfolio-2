@@ -17,7 +17,7 @@ body {
 
 h2 {
     font-family: "Orbitron", sans-serif;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 button {
@@ -168,7 +168,7 @@ input::placeholder {
 
 .btn {
     border: 7px solid;
-    padding: 5px;
+    padding: 10px;
     margin: 0 7px 14px;
     border-radius: 50%;
     background-color: #fff;
@@ -177,34 +177,38 @@ input::placeholder {
 
 .btn>i {
     font-size: 4rem;
+    color: #445361;
+}
+
+.paper {
+    border-color: #B00067;
+}
+
+.rock {
+   border-color: #00B07F;
+}
+
+.scissors {
+    border-color: #B09800;
+}
+
+.lizard {
+    border-color: #3200B0;
+}
+
+.spock {
+    border-color: #0098B0;
 }
 
 .btn:hover {
     background-color: #0497b2;
     color: #fff;
+    border-color: #fff;
     box-shadow: 0 0 10px 5px #0497b2;
 }
-
-.paper {
-    border-color: #ffc107;
+.btn:hover>i {
+    color:#fff;
 }
-
-.rock {
-   border-color: #e88179;
-}
-
-.scissors {
-    border-color: #00bcd4;
-}
-
-.lizard {
-    border-color: #8bc34a;
-}
-
-.spock {
-    border-color: #cb71da;
-}
-
 
 
 /* adding media-query */

@@ -39,8 +39,8 @@
             <img id="logo" src="assets/images/logo.webp" alt="website logo">
         </div>
 
-        <!-- welcome to Game area -->
-        <section class="play visible" id="choose">
+        <!-- chosing area -->
+        <section class="play " id="choose">
             <h2>pick your choice <span id="player-name">Player Name</span>!</h2>
             <div class="btns">
                 <button class="btn paper"><i class="fa-solid fa-hand"></i></button>
@@ -48,6 +48,34 @@
                 <button class="btn scissors"><i class="fa-solid fa-hand-scissors"></i></button>
                 <button class="btn lizard"><i class="fa-solid fa-hand-lizard"></i></button>
                 <button class="btn spock"><i class="fa-solid fa-hand-spock"></i></button>
+            </div>
+        </section>
+
+        <!-- result area -->
+        <section class="play visible" id="result">
+            <div class="score-container">
+                <div class="score">
+                    YOU
+                    <div id="user-score" class="score-points">0</div>
+                </div>
+                <div class="score">
+                    COMPUTER
+                    <div id="computer-score" class="score-points">0</div>
+                </div>
+            </div>
+            <div class="pick-container">
+                <div class="pick">
+                    <p>You picked</p>
+                    <div id="user-pick-img" class="pick-img"></div>
+                </div>
+                <div class="pick">
+                    <p>Computer picked</p>
+                    <div id="computer-pick-img" class="pick-img"></div>
+                </div>
+            </div>
+            <div class="text-center">
+                <h2 id="result"></h2>
+                <button class="btn btn-primary" id="play-again">PLAY AGAIN</button>
             </div>
         </section>
     </main>
