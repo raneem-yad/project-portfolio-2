@@ -22,14 +22,14 @@ h2 {
 
 /* Home content  */
 main {
+    /* background: url('../images/bg3.png') no-repeat center center / cover; */
     flex: 1 0 auto;
     /* margin-top: 47px; */
-    /* background: linear-gradient(45deg, #e1f3e1, transparent); */
+    background: linear-gradient(0deg, #0099b23d, transparent);
     /* Enable flex properties for child elements */
     display: flex;
     flex-direction: column;
 }
-
 #logo {
     width: 250px;
 }
@@ -60,6 +60,10 @@ blockquote p::after {
 
 #circles {
     margin: 5px 0;
+}
+
+#rules {
+    display: none;
 }
 
 .circle {
@@ -135,12 +139,15 @@ input::placeholder {
 
 /* adding media-query */
 @media screen and (min-width: 768px) {
+    main{
+        padding: 20px 7rem;
+    }
     #home {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
     }
 
     #game-rules {
@@ -150,6 +157,21 @@ input::placeholder {
     #game-preview {
         flex: 1 0 auto;
         order: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #circles {
+        display: flex;
+        justify-content: space-around;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 45%;
+        gap: 20px;
     }
 
     #game-registration {
@@ -158,6 +180,7 @@ input::placeholder {
 }
 
 @media screen and (min-width: 1440px) {
+    
     #game-rules {
         width: 33.3%;
     }
@@ -165,6 +188,8 @@ input::placeholder {
     #game-preview {
         order: unset;
     }
+
+
 
     #game-registration {
         width: 33.3%;
