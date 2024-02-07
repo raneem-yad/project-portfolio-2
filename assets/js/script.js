@@ -1,3 +1,6 @@
+const btnRules = document.querySelector(".btn-rules");
+const btnClose = document.querySelector(".close");
+const modal = document.querySelector(".modal");
 // Wait for the DOM to finish loading before running the game
 // Get the player name from url 
 
@@ -7,16 +10,18 @@ document.addEventListener("DOMContentLoaded", function () {
     let url = new URL(urlString);
     const playerNameURL = url.searchParams.get("player-name");
     if (playerNameURL !== null) {
-        console.log(playerNameURL); 
+        console.log(playerNameURL);
         let playerNames = document.getElementsByClassName('player-name');
-        for( playerName of playerNames){
+        for (playerName of playerNames) {
             playerName.innerHTML = playerNameURL;
         }
     } else {
         console.log("playerName not found in URL");
     }
 
-    // console.log(playerName);
+    // Modal visibility
+    btnRules.onclick = () => (modal.style.display = "block");
+    btnClose.onclick = () => (modal.style.display = "none");
 
 
 
