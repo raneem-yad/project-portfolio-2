@@ -8,8 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const playerNameURL = url.searchParams.get("player-name");
     if (playerNameURL !== null) {
         console.log(playerNameURL); 
-        let playerName = document.getElementById('player-name');
-        playerName.innerHTML = playerNameURL;
+        let playerNames = document.getElementsByClassName('player-name');
+        for( playerName of playerNames){
+            playerName.innerHTML = playerNameURL;
+        }
     } else {
         console.log("playerName not found in URL");
     }

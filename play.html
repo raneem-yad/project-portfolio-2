@@ -37,11 +37,33 @@
         <!-- logo area -->
         <div>
             <img id="logo" src="assets/images/logo.webp" alt="website logo">
+
         </div>
+        <!-- timmer  -->
+        <div>
+            <h3>Time Left: <span id="timer">00:03</span></h3>
+        </div>
+        <!-- Scores and Helping section -->
+        <div class="score-container">
+            <!-- <div class="score-header">
+                <h3>Socres</h3>
+                <i class="fa-solid fa-circle-info"></i>
+            </div> -->
+            <div class="score">
+                <span class="player-name"> You</span>
+                <div id="user-score" class="score-points">0</div>
+            </div>
+            <div class="score">
+                COMPUTER
+                <div id="computer-score" class="score-points">0</div>
+            </div>
+        </div>
+
+
 
         <!-- chosing area -->
         <section class="play " id="choose">
-            <h2>pick your choice <span id="player-name">Player Name</span>!</h2>
+            <h2>pick your choice <span class="player-name">Player Name</span>!</h2>
             <div class="btns">
                 <button class="btn paper"><i class="fa-solid fa-hand"></i></button>
                 <button class="btn rock"><i class="fa-solid fa-hand-back-fist"></i></button>
@@ -53,16 +75,7 @@
 
         <!-- result area -->
         <section class="play visible" id="result">
-            <div class="score-container">
-                <div class="score">
-                    YOU
-                    <div id="user-score" class="score-points">0</div>
-                </div>
-                <div class="score">
-                    COMPUTER
-                    <div id="computer-score" class="score-points">0</div>
-                </div>
-            </div>
+
             <div class="pick-container">
                 <div class="pick">
                     <p>You picked</p>
@@ -77,7 +90,30 @@
                 <h2 id="result"></h2>
                 <button class="btn btn-primary" id="play-again">PLAY AGAIN</button>
             </div>
+
         </section>
+
+        <button class="btn-rules">RULES</button>
+        <section class="modal">
+            <div class="rules">
+                <button class="close">&times;</button>
+                <h3>Rules Are!</h3>
+                <ul>
+                    <li>Scissors cuts paper</li>
+                    <li>Paper covers rock</li>
+                    <li>Rock crushes lizard</li>
+                    <li>Lizard poisons Spock</li>
+                    <li>Spock smashes scissors</li>
+                    <li>Scissors decapitates lizard</li>
+                    <li>Lizard eats paper</li>
+                    <li>Paper disproves Spock</li>
+                    <li>Spock vaporizes rock</li>
+                    <li>Rock crushes scisso</li>
+                </ul>
+            </div>
+        </section>
+
+
     </main>
     <!-- Footer content  -->
     <footer>

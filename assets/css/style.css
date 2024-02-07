@@ -143,6 +143,27 @@ input::placeholder {
 }
 
 /* Play the game Page */
+.score-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.score {
+    width: 86px;
+    height: 68px;
+    color: #004b5a;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 4px;
+    padding-top: 12px;
+}
+
+.score-points {
+    font-size: 36px;
+    color: #777;
+}
+
 .play {
     opacity: 0;
     position: absolute;
@@ -185,7 +206,7 @@ input::placeholder {
 }
 
 .rock {
-   border-color: #00B07F;
+    border-color: #00B07F;
 }
 
 .scissors {
@@ -206,9 +227,40 @@ input::placeholder {
     border-color: #fff;
     box-shadow: 0 0 10px 5px #0497b2;
 }
+
 .btn:hover>i {
-    color:#fff;
+    color: #fff;
 }
+
+.pick-container {
+    display: flex;
+}
+
+.pick-img {
+    width: 130px;
+    height: 130px;
+    border-width: 7px;
+    border-style: solid;
+    border-radius: 50%;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 58%;
+    margin: auto;
+    transform: scale(0);
+    transition: transform 0.7s;
+}
+
+.pick {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+
+
 
 
 /* adding media-query */
