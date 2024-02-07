@@ -143,10 +143,17 @@ input::placeholder {
 }
 
 /* Play the game Page */
+.btn-back {
+    color: #445361;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 80px;
+    left: 15px;
+}
+
 .score-container {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 40px;
 }
 
 .score {
@@ -157,6 +164,10 @@ input::placeholder {
     text-align: center;
     border-radius: 4px;
     padding-top: 12px;
+}
+
+.score>span {
+    text-transform: uppercase;
 }
 
 .score-points {
@@ -197,7 +208,7 @@ input::placeholder {
 }
 
 .btn>i {
-    font-size: 4rem;
+    font-size: 3rem;
     color: #445361;
 }
 
@@ -270,8 +281,6 @@ input::placeholder {
     font-size: 1.5rem;
     border-radius: 4px;
     transition: all 1s ease;
-    /* padding: 16px 32px 14px;     */
-    transition: background-color 0.5s, color 0.5s, border-color 0.5s;
     background-color: transparent;
     position: absolute;
     bottom: 35px;
@@ -342,6 +351,14 @@ input::placeholder {
         max-width: 440px;
     }
 
+    .btn-back {
+        top: 35px;
+    }
+
+    .btn>i {
+        font-size: 4rem;
+    }
+
     .rules {
         width: 400px;
     }
@@ -397,6 +414,10 @@ input::placeholder {
         height: 100px;
     }
 
+    .btn>i {
+        font-size: 6rem;
+    }
+
     .pick {
         font-size: 24px;
     }
@@ -432,9 +453,12 @@ input::placeholder {
         order: unset;
     }
 
-
-
     #game-registration {
         width: 33.3%;
+    }
+
+    /* playing page */
+    .btn>i {
+        font-size: 9rem;
     }
 }
