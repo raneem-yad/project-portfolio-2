@@ -65,10 +65,8 @@ function calculateWinnerRule(leftSide, rightSide){
                 console.log(rule.output);
                 if(rule.output === leftSide) {
                     console.log("the winner for this round is user")
-                } else if(rule.output === rightSide){
+                } else {
                     console.log("the winner for this round is computer")
-                }else{
-                    console.error("there must be a winner!");
                 }
             }else {
                 console.error("thers is no accepted rule");

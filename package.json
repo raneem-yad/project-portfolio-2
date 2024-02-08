@@ -1,0 +1,38 @@
+{
+  "name": "bazinga",
+  "version": "1.0.0",
+  "description": "rock paper scissor game",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raneem-yad/project-portfolio-2.git"
+  },
+  "keywords": [
+    "Bazinga",
+    "Big",
+    "Bang",
+    "Theory",
+    "Rock",
+    "Paper",
+    "Scissors",
+    "Lizard",
+    "Spock",
+    "Game",
+    "Online",
+    "Geek",
+    "Challenge",
+    "Fun"
+  ],
+  "author": "Raneem Yad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raneem-yad/project-portfolio-2/issues"
+  },
+  "homepage": "https://github.com/raneem-yad/project-portfolio-2#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
