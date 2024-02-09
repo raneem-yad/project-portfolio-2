@@ -245,6 +245,11 @@ input::placeholder {
 
 .pick-container {
     display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
 }
 
 .pick-icon {
@@ -271,7 +276,7 @@ input::placeholder {
 }
 .res-icons {
     cursor: pointer;
-    font-size: 8rem;
+    font-size: 6rem;
     text-align: center;
     background-color: transparent;
     border: unset;
@@ -432,6 +437,7 @@ input::placeholder {
     .pick {
         font-size: 24px;
     }
+    
 
     .pick-icon {
         width: 200px;
@@ -445,6 +451,11 @@ input::placeholder {
 
     .score-container {
         margin-bottom: 80px;
+    }
+
+    .res-icons {
+
+        font-size: 8rem;
     }
 
     .rules {

@@ -19,8 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (let button of buttons) {
         button.addEventListener("click", function () {
-            let  userChoice= this.getAttribute("data-type");
-            runGame(userChoice);
+            if (this.getAttribute("data-type") === "playAgain") { 
+                playAgain()
+            } else {
+                let userChoice = this.getAttribute("data-type");
+                runGame(userChoice);
+            }
         });
     }
 });
@@ -33,10 +37,10 @@ function runGame(userChoice) {
     let leftSide = userChoice;
 
     //Get the computer choice
-    let rightSide= computerPick();
+    let rightSide = computerPick();
 
     //Calculate and update the result
-    calculateWinnerRule(leftSide,rightSide);
+    calculateWinnerRule(leftSide, rightSide);
     // result.textContent = resultText;
 
     //Go to the results screen
@@ -44,7 +48,7 @@ function runGame(userChoice) {
     resultScreen.classList.add("visible");
 
     //Show the icons results 
-    showIconsResult(leftSide,rightSide);
+    showIconsResult(leftSide, rightSide);
 
 
 }
@@ -138,38 +142,70 @@ function incrementComputerScore() {
  * @param {string} rightSide - The choice made by the computer.
  * @returns {void}
  */
-function showIconsResult(leftSide,rightSide){
+function showIconsResult(leftSide, rightSide) {
     let userPickedResult = document.getElementById('user-pick-icon');
     let computerpickedResult = document.getElementById('computer-pick-icon');
 
     const rulesIcons = {
         paper: `<span class="res-icons"><i class="fa-solid fa-hand"></i></span>`,
-        rock : `<span class="res-icons"><i class="fa-solid fa-hand-back-fist"></i></span>`,
-        scissor:`<span class="res-icons"><i class="fa-solid fa-hand-scissors"></i></span>`,
+        rock: `<span class="res-icons"><i class="fa-solid fa-hand-back-fist"></i></span>`,
+        scissor: `<span class="res-icons"><i class="fa-solid fa-hand-scissors"></i></span>`,
         spock: `<span class="res-icons"><i class="fa-solid fa-hand-spock"></i></span>`,
         lizard: `<span class="res-icons"><i class="fa-solid fa-hand-lizard"></i></span>`,
     }
-    for(let icon in rulesIcons){
-        if(rulesIcons.hasOwnProperty(leftSide)&&rulesIcons.hasOwnProperty(rightSide)){
-            if(icon == leftSide) {
+    for (let icon in rulesIcons) {
+        if (rulesIcons.hasOwnProperty(leftSide) && rulesIcons.hasOwnProperty(rightSide)) {
+            if (icon == leftSide) {
                 console.log(`player picked icon ${icon}`);
-                userPickedResult.innerHTML=rulesIcons[icon];
+                userPickedResult.innerHTML = rulesIcons[icon];
                 setTimeout(function () {
                     userPickedResult.classList.add("scale");
-                  }, 400);
-            }else if(icon == rightSide){
+                }, 400);
+            } else if (icon == rightSide) {
                 console.log(`computer picked icon ${icon}`);
-                
-                computerpickedResult.innerHTML=rulesIcons[icon];
+
+                computerpickedResult.innerHTML = rulesIcons[icon];
                 setTimeout(function () {
                     computerpickedResult.classList.add("scale");
-                  }, 1000);
+                }, 1000);
             }
-            
+
         }
     }
+    // play automatically after a little bot of time
+    setTimeout(function(){
+        playAgain();
+    },10000)
 }
 
+/**
+ * Resets the game state to allow the user to play again.
+ * 
+ * @function
+ * @name playAgain
+ * @returns {void}
+ */
+function playAgain() {
+    let ChosseScreen = document.getElementById("choose");
+    let resultScreen = document.getElementById("result");
+    let userPickedResult = document.getElementById('user-pick-icon');
+    let computerpickedResult = document.getElementById('computer-pick-icon');
+    // Show the first screen, in order to play again
+
+    resultScreen.classList.remove("visible");
+    ChosseScreen.classList.add("visible");
+    userPickedResult.classList.remove("scale");
+    computerpickedResult.classList.remove("scale");
+}
+
+/**
+ * Retrieves the player's name from the URL query parameters and updates the HTML elements 
+ * with the class 'player-name' accordingly.
+ * 
+ * @function
+ * @name getPlayerNameFromURL
+ * @returns {void}
+ */
 function getPlayerNameFromURL() {
     const urlString = window.location.href;
     let url = new URL(urlString);
