@@ -109,58 +109,6 @@ function calculateWinnerRule(leftSide, rightSide) {
 
 }
 
-/**
- * Increments the player's score by 1.
- * 
- * @function
- * @name incrementPlayerScore
- * @returns {void}
- */
-function incrementPlayerScore() {
-
-    let oldScore = parseInt(document.getElementById("user-score").innerText);
-    document.getElementById("user-score").innerText = ++oldScore;
-
-}
-
-/**
- * Increments the computer's score by 1.
- * 
- * @function
- * @name incrementComputerScore
- * @returns {void}
- */
-function incrementComputerScore() {
-
-    let oldScore = parseInt(document.getElementById("computer-score").innerText);
-    document.getElementById("computer-score").innerText = ++oldScore;
-
-}
-
-function showIconsResult(leftSide,rightSide){
-    let userPickedResult = document.getElementById('user-pick-icon');
-    let computerpickedResult = document.getElementById('computer-pick-icon');
-    const rulesIcons = {
-        paper: `<button class="res-icons paper" data-type="paper"><i class="fa-solid fa-hand"></i></button>`,
-        rock : `<button class="res-icons rock" data-type="rock"><i class="fa-solid fa-hand-back-fist"></i></button>`,
-        scissor:`<button class="res-icons scissor" data-type="scissors"><i class="fa-solid fa-hand-scissors"></i></button>`,
-        spock: `<button class="res-icons spock" data-type="spock"><i class="fa-solid fa-hand-spock"></i></button>`,
-        lizard: `<button class="res-icons lizard" data-type="lizard"><i class="fa-solid fa-hand-lizard"></i></button>`,
-    }
-    for(let icon in rulesIcons){
-        if(rulesIcons.hasOwnProperty(leftSide)&&rulesIcons.hasOwnProperty(rightSide)){
-            console.log(`the key icon is ${icon} and the value for this key is ${rulesIcons[icon]}`);
-            if(icon == leftSide) {
-                console.log(`player picked icon ${icon}`);
-                userPickedResult.innerHTML=rulesIcons[icon];
-            }else if(icon == rightSide){
-                console.log(`computer picked icon ${icon}`);
-                userPickedResult.innerHTML=rulesIcons[icon];
-            }
-            
-        }
-    }
-}
 
 function getPlayerNameFromURL() {
     const urlString = window.location.href;
