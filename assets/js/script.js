@@ -15,13 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
     btnClose.onclick = () => (modal.style.display = "none");
 
 
-
     let buttons = document.getElementsByClassName("btn");
 
     for (let button of buttons) {
         button.addEventListener("click", function () {
             let  userChoice= this.getAttribute("data-type");
-            console.log(userChoice);
             runGame(userChoice);
         });
     }
@@ -68,7 +66,6 @@ function computerPick() {
  * @returns {void} Outputs the winner to the console.
  */
 function calculateWinnerRule(leftSide, rightSide) {
-    console.log(`at cal func left side is ${leftSide} and right side is ${rightSide}`);
     if (leftSide === rightSide) {
         console.log("it's tie")
     } else {
@@ -86,11 +83,7 @@ function calculateWinnerRule(leftSide, rightSide) {
         ];
 
         for (let rule of rules) {
-            console.log(rule.output);
             if (rule.input.includes(leftSide) && rule.input.includes(rightSide)) {
-                
-                console.log(`at first if func ${leftSide} and right side is ${rightSide}`);
-                console.log(rule.output);
 
                 if (rule.output === leftSide) {
                     console.log("the winner for this round is user");
@@ -102,7 +95,7 @@ function calculateWinnerRule(leftSide, rightSide) {
                 // when you find the winner just break no need to check the other rules
                 break;
             } else {
-                console.log("Not this rule");
+                // console.log("Not this rule");
             }
         }
     }
@@ -148,22 +141,29 @@ function incrementComputerScore() {
 function showIconsResult(leftSide,rightSide){
     let userPickedResult = document.getElementById('user-pick-icon');
     let computerpickedResult = document.getElementById('computer-pick-icon');
+
     const rulesIcons = {
-        paper: `<button class="res-icons paper" data-type="paper"><i class="fa-solid fa-hand"></i></button>`,
-        rock : `<button class="res-icons rock" data-type="rock"><i class="fa-solid fa-hand-back-fist"></i></button>`,
-        scissor:`<button class="res-icons scissor" data-type="scissors"><i class="fa-solid fa-hand-scissors"></i></button>`,
-        spock: `<button class="res-icons spock" data-type="spock"><i class="fa-solid fa-hand-spock"></i></button>`,
-        lizard: `<button class="res-icons lizard" data-type="lizard"><i class="fa-solid fa-hand-lizard"></i></button>`,
+        paper: `<span class="res-icons"><i class="fa-solid fa-hand"></i></span>`,
+        rock : `<span class="res-icons"><i class="fa-solid fa-hand-back-fist"></i></span>`,
+        scissor:`<span class="res-icons"><i class="fa-solid fa-hand-scissors"></i></span>`,
+        spock: `<span class="res-icons"><i class="fa-solid fa-hand-spock"></i></span>`,
+        lizard: `<span class="res-icons"><i class="fa-solid fa-hand-lizard"></i></span>`,
     }
     for(let icon in rulesIcons){
         if(rulesIcons.hasOwnProperty(leftSide)&&rulesIcons.hasOwnProperty(rightSide)){
-            console.log(`the key icon is ${icon} and the value for this key is ${rulesIcons[icon]}`);
             if(icon == leftSide) {
                 console.log(`player picked icon ${icon}`);
                 userPickedResult.innerHTML=rulesIcons[icon];
+                setTimeout(function () {
+                    userPickedResult.classList.add("scale");
+                  }, 400);
             }else if(icon == rightSide){
                 console.log(`computer picked icon ${icon}`);
-                userPickedResult.innerHTML=rulesIcons[icon];
+                
+                computerpickedResult.innerHTML=rulesIcons[icon];
+                setTimeout(function () {
+                    computerpickedResult.classList.add("scale");
+                  }, 1000);
             }
             
         }

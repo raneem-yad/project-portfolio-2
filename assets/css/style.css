@@ -269,10 +269,18 @@ input::placeholder {
     flex-direction: column;
     font-size: 20px;
 }
+.res-icons {
+    cursor: pointer;
+    font-size: 8rem;
+    text-align: center;
+    background-color: transparent;
+    border: unset;
+    color: #0098B0;
+}
 
 .scale {
     transform: scale(1);
-  }
+}
 /* rules section */
 .btn-rules {
     font-family: "Orbitron", sans-serif;
