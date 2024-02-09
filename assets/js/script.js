@@ -172,10 +172,7 @@ function showIconsResult(leftSide, rightSide) {
 
         }
     }
-    // play automatically after a little bot of time
-    setTimeout(function(){
-        playAgain();
-    },10000)
+    
 }
 
 /**
