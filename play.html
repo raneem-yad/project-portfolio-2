@@ -64,7 +64,7 @@
 
 
         <!-- chosing area -->
-        <section class="play visible" id="choose">
+        <section class="play" id="choose">
             <h2>pick your choice <span class="player-name">Player Name</span>!</h2>
             <div class="btns">
                 <button class="btn paper" data-type="paper"><i class="fa-solid fa-hand"></i></button>
@@ -76,16 +76,18 @@
         </section>
 
         <!-- result area -->
-        <section class="play" id="result">
+        <section class="play visible" id="result">
 
             <div class="pick-container">
                 <div class="pick">
                     <p>You picked</p>
-                    <div id="user-pick-img" class="pick-img"></div>
+                    <div id="user-pick-icon" class="pick-icon">
+                        <button class="res-icons lizard" data-type="lizard"><i class="fa-solid fa-hand-lizard"></i></button>
+                    </div>
                 </div>
                 <div class="pick">
                     <p>Computer picked</p>
-                    <div id="computer-pick-img" class="pick-img"></div>
+                    <div id="computer-pick-icon" class="pick-icon"></div>
                 </div>
             </div>
             <div class="text-center">
