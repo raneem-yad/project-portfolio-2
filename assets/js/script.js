@@ -14,14 +14,11 @@ const CHOICE_IMAGE_MAP = {
 }
 
 // Wait for the DOM to finish loading before running the game
-// Get the player name from url 
 document.addEventListener("DOMContentLoaded", function () {
-
-
     const modal = document.querySelector(".modal");
     let buttons = document.getElementsByTagName('button');
 
-
+    // Get the player name from url 
     getPlayerNameFromURL();
     gameTimer();
 
@@ -82,7 +79,7 @@ function gameTimer() {
         if (time < 0) {
             clearInterval(interval);
             countdownTimer.innerHTML = "Time's up!";
-             showFinalScore();
+            showFinalScore();
         }
     }
 
@@ -129,10 +126,9 @@ function showFinalScore() {
 function runGame(userChoice) {
     //Get the computer choice
     let computerChoice = computerPick();
-    //'SPOCK' , user : rock
+
     //Calculate and update the result
     let result = calculateWinnerRule(userChoice, computerChoice);
-    console.log(`result after cal is ${result}`)
     if (result !== 0) { // it's not a draw!
         incrementScore(result);
     }
@@ -219,10 +215,10 @@ function incrementScore(winner) {
  */
 function renderResults(userChoice, computerChoice) {
     //Go to the results screen
-    const ChosseScreen = document.getElementById("choose");
+    const chooseScreen = document.getElementById("choose");
     const resultScreen = document.getElementById("result");
 
-    ChosseScreen.classList.remove("visible");
+    chooseScreen.classList.remove("visible");
     resultScreen.classList.add("visible");
     let userChoiceIcon = CHOICE_IMAGE_MAP[userChoice];
     let computerChoiceIcon = CHOICE_IMAGE_MAP[computerChoice];
