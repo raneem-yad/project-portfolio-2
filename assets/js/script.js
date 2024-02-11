@@ -1,9 +1,9 @@
 // Game data structure 
-const ROCK = "rock";
-const PAPER = "paper";
-const SCISSOR = "scissor";
-const SPOCK = "spock";
-const LIZARD = "lizard";
+const ROCK = "ROCK";
+const PAPER = "PAPER";
+const SCISSOR = "SCISSOR";
+const SPOCK = "SPOCK";
+const LIZARD = "LIZARD";
 
 const CHOICE_IMAGE_MAP = {
     PAPER: `<span class="res-icons"><i class="fa-solid fa-hand"></i></span>`,
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     modal.style.display = "none";
                     break;
                 default:
-                    let userChoice = this.getAttribute("data-type");
+                    let userChoice = this.getAttribute("data-type").toUpperCase();
                     runGame(userChoice);
             }
         });
@@ -45,19 +45,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function runGame(userChoice) {
 
+    
     //Get the computer choice
     let computerChoice = computerPick();
-    //'SPOCK'
+    //'SPOCK' , user : rock
     //Calculate and update the result
     let result = calculateWinnerRule(userChoice, computerChoice);
+    console.log(`result after cal is ${result}`)
     if (result !== 0) { // it's not a draw!
         incrementScore(result);
     }
 
-    renderResults(result, userChoice ,computerChoice);
+    renderResults(userChoice ,computerChoice);
+    renderResultAsText(result);
     
-    //Show the icons results 
-    showIconsResult(leftSide, rightSide);
 
 }
 
@@ -78,8 +79,8 @@ function computerPick() {
  * @param {string} computerChoice - The choice made by the computer ('ROCK', 'PAPER', 'SCISSOR', 'LIZARD', or 'SPOCK').
  * @returns {number} Returns 1 if the computer wins, -1 if the user wins, and 0 if it's a draw.
  */
-function calculateWinnerRule(userChoice, userChoice) {
-    if (userChoice === userChoice) {
+function calculateWinnerRule(userChoice, computerChoice) {
+    if (userChoice === computerChoice) {
         //it's a Draw!
         return 0;
     } else {
@@ -144,12 +145,14 @@ function renderResults(userChoice ,computerChoice){
     const resultScreen = document.getElementById("result");
 
 
+
     ChosseScreen.classList.remove("visible");
     resultScreen.classList.add("visible");
-    let userChoiceIcon = rulesIcons[userChoice];
-    let computerChoiceIcon = rulesIcons[computerChoice];
+    let userChoiceIcon = CHOICE_IMAGE_MAP[userChoice];
+    let computerChoiceIcon = CHOICE_IMAGE_MAP[computerChoice];
     renderPlayerChoice("user", userChoiceIcon);
     renderPlayerChoice("computer", computerChoiceIcon);
+    
 
 }
 
@@ -175,6 +178,22 @@ function renderPlayerChoice(player,icon){
     }, timeDelay);
 }
 
+/**
+ * Renders the game result as text on the screen.
+ *
+ * @param {number} result - The result of the game round. Possible values: -1 for user win, 1 for computer win, 0 for draw.
+ */
+function renderResultAsText(result){
+
+    const resultText = document.getElementById("result-text");
+    if(result == -1){
+        resultText.innerHTML = "You Win!"
+    }else if(result == 1){
+        resultText.innerHTML = "Computer Win!"
+    }else{
+        resultText.innerHTML = "It's Draw!"
+    }
+}
 // /**
 //  * Updates the displayed icons for the user's and computer's choices based on what they picked.
 //  * 
@@ -247,8 +266,8 @@ function getPlayerNameFromURL() {
     if (playerNameFromUrl !== null) {
         let playerNames = document.getElementsByClassName('player-name');
 
-        for (playerName of playerNames) {
-            playerName.innerHTML = playerNameURL;
+        for (let playerName of playerNames) {
+            playerName.innerHTML = playerNameFromUrl;
         }
     } else {
         console.log("playerName not found in URL");
