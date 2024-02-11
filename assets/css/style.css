@@ -28,7 +28,6 @@ button {
 main {
     /* background: url('../images/bg3.png') no-repeat center center / cover; */
     flex: 1 0 auto;
-    /* margin-top: 47px; */
     background: linear-gradient(0deg, #0099b23d, transparent);
     /* Enable flex properties for child elements */
     display: flex;
@@ -74,6 +73,7 @@ blockquote p::after {
 .circle {
     border: 4px dashed #445361;
     border-radius: 50px;
+    color: #445361;
     display: inline-block;
     padding: 0.6rem;
     transition: all 1s ease;
@@ -187,7 +187,7 @@ input::placeholder {
     padding: 0 7px;
     box-sizing: border-box;
     margin: auto;
-    transition: opacity 0.3s 0.5s;
+    /* transition: opacity 0.3s 0.5s; */
 }
 
 .visible {
@@ -200,26 +200,27 @@ input::placeholder {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 10px;
 }
 
 .paper {
-    border-color: #B00067;
+    border-color: #97B203;
 }
 
 .rock {
-    border-color: #00B07F;
+    border-color: #B25203;
 }
 
 .scissors {
-    border-color: #B09800;
+    border-color: #0374B2;
 }
 
 .lizard {
-    border-color: #3200B0;
+    border-color: #0342B2;
 }
 
 .spock {
-    border-color: #0098B0;
+    border-color: #0397B2;
 }
 
 .pick-container {
@@ -236,7 +237,14 @@ input::placeholder {
     font-size: 20px;
 }
 
+.pick-icon{
+    transform: scale(0);
+    transition: transform 0.7s;
+}
 
+.pick p{
+    padding: 8px 0;
+}
 .scale {
     transform: scale(1);
 }
@@ -298,8 +306,6 @@ input::placeholder {
     text-align: start;
     border-radius: 4px;
     width: 95%;
-    animation-name: animatetop;
-    animation-duration: 0.4s;
 }
 
 .rules h3 {
@@ -312,10 +318,15 @@ input::placeholder {
     z-index: 15;
     left: 0;
     top: 0;
+    bottom: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
+    -webkit-transition: opacity 0.2s ease-in;
+    -moz-transition: opacity 0.2s ease-in;
+    transition: opacity 0.2s ease-in;
 }
 
 .close {
@@ -325,17 +336,6 @@ input::placeholder {
     float: right;
 }
 
-@keyframes animatetop {
-    from {
-        /* top: -300px; */
-        opacity: 0;
-    }
-
-    to {
-        /* top: 0; */
-        opacity: 1;
-    }
-}
 
 .rules ul {
     list-style-type: none;

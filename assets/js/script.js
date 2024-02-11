@@ -77,7 +77,7 @@ function gameTimer() {
             showFinalScore();
         }
     }
-    const interval = setInterval(updateCountdown, 1000);
+    // const interval = setInterval(updateCountdown, 1000);
     
 }
 function showFinalScore(){
@@ -91,7 +91,12 @@ function showFinalScore(){
     let computerScore = parseInt(document.getElementById('computer-score').innerText);
 
     // cal final winner 
-    let winner = playerScore> computerScore ? "You" : "Computer"
+    let winner;
+    if (playerScore == computerScore) {
+        winner = "No One! it's tie";
+    }else if( playerScore> computerScore){
+        winner = "You";
+    }else {winner = "Computer" }
     // showing the winner 
     document.getElementById('winner').innerText = winner;
     
