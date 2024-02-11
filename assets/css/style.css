@@ -111,7 +111,7 @@ input::placeholder {
 }
 
 .btn-play {
-    background-color: #fff;
+    background-color: transparent;
     font-family: "Orbitron", sans-serif;
     color: #445361;
     border: 4px dashed #445361;
@@ -487,8 +487,12 @@ input::placeholder {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        max-width: 45%;
+        max-width: 60%;
         gap: 20px;
+    }
+
+    .circle>i {
+        font-size: 5rem;
     }
 
     #game-registration {

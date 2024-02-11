@@ -59,7 +59,6 @@
             <div id="game-preview">
                 <h2>Game Preview</h2>
                 <div id="circles">
-                    <img id="rules" src="assets/images/rules.webp" alt="Game rules">
                     <div class="circle">
                         <i class="fa-solid fa-hand"></i>
                     </div>
@@ -87,7 +86,7 @@
                     <input type="text" name="player-name" id="player" placeholder="Player Name" class="text-input"
                         required>
                     <input type="number" name="player-age" id="age" placeholder="Player Age" class="text-input"
-                        required>
+                        required min="10" max="85">
                     <!-- <input type="button"  value="Play"> -->
                     <button type="submit" class="btn-play">Play</button>
                 </form>
