@@ -37,7 +37,7 @@
         <!-- logo area -->
         <div>
             <img id="logo" src="assets/images/logo.webp" alt="website logo">
-            
+
         </div>
         <!-- back to home button -->
         <a class="btn-back" href="index.html"><i class="fa-solid fa-circle-arrow-left"></i></a>
@@ -67,11 +67,11 @@
         <section class="play visible" id="choose">
             <h2>pick your choice <span class="player-name">Player Name</span>!</h2>
             <div class="btns">
-                <button class="circle paper" data-type="paper"><i class="fa-solid fa-hand"></i></button>
-                <button class="circle rock" data-type="rock"><i class="fa-solid fa-hand-back-fist"></i></button>
-                <button class="circle scissor" data-type="scissor"><i class="fa-solid fa-hand-scissors"></i></button>
-                <button class="circle lizard" data-type="lizard"><i class="fa-solid fa-hand-lizard"></i></button>
-                <button class="circle spock" data-type="spock"><i class="fa-solid fa-hand-spock"></i></button>
+                <button class="circle paper" data-type="choose" data-play="paper"><i class="fa-solid fa-hand"></i></button>
+                <button class="circle rock" data-type="choose" data-play="rock"><i class="fa-solid fa-hand-back-fist"></i></button>
+                <button class="circle scissor" data-type="choose" data-play="scissor"><i class="fa-solid fa-hand-scissors"></i></button>
+                <button class="circle lizard" data-type="choose" data-play="lizard"><i class="fa-solid fa-hand-lizard"></i></button>
+                <button class="circle spock" data-type="choose" data-play="spock"><i class="fa-solid fa-hand-spock"></i></button>
             </div>
         </section>
 
@@ -91,13 +91,13 @@
             <div class="text-center">
                 <h2 id="result-text"></h2>
                 <button class="btn-action" id="play-again" data-type="playAgain">PLAY AGAIN</button>
-                
+
             </div>
 
         </section>
 
         <button class="btn-rules" data-type="open-modal">RULES <i class="fa-solid fa-circle-info"></i></button>
-       
+
         <section class="modal">
             <div class="rules">
                 <button class="close" data-type="close-modal">&times;</button>
@@ -126,10 +126,7 @@
                 <p><span class="player-name">You</span>: <span id="player-final-score"></span></p>
                 <p>Computer: <span id="computer-final-score"></span></p>
                 <!-- control buttons -->
-                <!-- <button class="btn-action" id="play-again" data-type="playAgain">Play Again</button> -->
-                <button class="btn-action">
-                    <a href="index.html"><i class="fa-solid fa-circle-arrow-left"></i> BackTo Home</a>
-                </button>
+                <a href="index.html" class="btn-action"><i class="fa-solid fa-circle-arrow-left"></i> Back Home</a>
             </div>
         </section>
 

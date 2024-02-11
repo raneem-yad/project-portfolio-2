@@ -35,9 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 case 'close-modal':
                     modal.style.display = "none";
                     break;
-                default:
-                    let userChoice = this.getAttribute("data-type").toUpperCase();
+                case 'choose':
+                    let userChoice = this.getAttribute("data-play").toUpperCase();
                     runGame(userChoice);
+                    break;
             }
         });
     }
