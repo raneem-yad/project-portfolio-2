@@ -18,12 +18,9 @@ const CHOICE_IMAGE_MAP = {
 document.addEventListener("DOMContentLoaded", function () {
 
 
-    // const modal = document.querySelector(".modal");
+    const modal = document.querySelector(".modal");
     let buttons = document.getElementsByTagName('button');
-    let modal = document.getElementsByClassName("modal")[1];// the second element 
-    modal.style.display = "block";
-    modal.style.opacity = 1;
-    modal.style.zIndex = 9999;
+ 
 
     getPlayerNameFromURL();
     gameTimer();
@@ -86,7 +83,23 @@ function gameTimer() {
 function showFinalScore(){
     let modal = document.getElementsByClassName("modal")[1];// the second element 
     modal.style.display = "block";
+    modal.style.opacity = 1;
+    modal.style.zIndex = 9999;
 
+    //get each player score 
+    let playerScore = parseInt(document.getElementById('user-score').innerText);
+    let computerScore = parseInt(document.getElementById('computer-score').innerText);
+
+    // cal final winner 
+    let winner = playerScore> computerScore ? "You" : "Computer"
+    // showing the winner 
+    document.getElementById('winner').innerText = winner;
+    
+    // show each player score   
+    let finalUserScore = document.getElementById('player-final-score')
+    let finalComputerScore = document.getElementById('computer-final-score')
+    finalUserScore.innerText =playerScore;
+    finalComputerScore.innerText =computerScore;
 }
 
 function runGame(userChoice) {
