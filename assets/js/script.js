@@ -45,30 +45,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function runGame(userChoice) {
 
-    let ChosseScreen = document.getElementById("choose");
-    let resultScreen = document.getElementById("result");
- 
     //Get the computer choice
     let computerChoice = computerPick();
     //'SPOCK'
     //Calculate and update the result
     let result = calculateWinnerRule(userChoice, computerChoice);
-    if (result === 0) {
-        // need to be implemented
-        renderDrawresult(result);
-    }else if (result === -1){
-        incrementScore("user");
-    }else{
-        incrementScore("computer");
+    if (result !== 0) { // it's not a draw!
+        incrementScore(result);
     }
 
-    //Go to the results screen
-    ChosseScreen.classList.remove("visible");
-    resultScreen.classList.add("visible");
-
+    renderResults(result, userChoice ,computerChoice);
+    
     //Show the icons results 
     showIconsResult(leftSide, rightSide);
-
 
 }
 
@@ -129,11 +118,13 @@ function calculateWinnerRule(userChoice, userChoice) {
 
 
 /**
- * Increments the scores by 1.
+ * Increments the score of the winner.
+ *
+ * @param {number} winner - The winner of the game round. 1 represents the computer, -1 represents the user.
  */
 function incrementScore(winner) {
     let winnerScoreElement = "user-score"
-    if (winner == "computer") {
+    if (winner === 1) {
         winnerScoreElement = "computer-score"
     }
 
@@ -142,44 +133,87 @@ function incrementScore(winner) {
 }
 
 /**
- * Updates the displayed icons for the user's and computer's choices based on what they picked.
- * 
- * @param {string} leftSide - The choice made by the user.
- * @param {string} rightSide - The choice made by the computer.
- * @returns {void}
+ * Renders the game results on the screen.
+ *
+ * @param {string} userChoice - The choice made by the user ('ROCK', 'PAPER', 'SCISSOR', 'LIZARD', or 'SPOCK').
+ * @param {string} computerChoice - The choice made by the computer ('ROCK', 'PAPER', 'SCISSOR', 'LIZARD', or 'SPOCK').
  */
-function showIconsResult(leftSide, rightSide) {
-    let userPickedResult = document.getElementById('user-pick-icon');
-    let computerpickedResult = document.getElementById('computer-pick-icon');
+function renderResults(userChoice ,computerChoice){
+    //Go to the results screen
+    const ChosseScreen = document.getElementById("choose");
+    const resultScreen = document.getElementById("result");
 
-    const rulesIcons = {
-        paper: `<span class="res-icons"><i class="fa-solid fa-hand"></i></span>`,
-        rock: `<span class="res-icons"><i class="fa-solid fa-hand-back-fist"></i></span>`,
-        scissor: `<span class="res-icons"><i class="fa-solid fa-hand-scissors"></i></span>`,
-        spock: `<span class="res-icons"><i class="fa-solid fa-hand-spock"></i></span>`,
-        lizard: `<span class="res-icons"><i class="fa-solid fa-hand-lizard"></i></span>`,
-    }
-    for (let icon in rulesIcons) {
-        if (rulesIcons.hasOwnProperty(leftSide) && rulesIcons.hasOwnProperty(rightSide)) {
-            if (icon == leftSide) {
-                console.log(`player picked icon ${icon}`);
-                userPickedResult.innerHTML = rulesIcons[icon];
-                setTimeout(function () {
-                    userPickedResult.classList.add("scale");
-                }, 400);
-            } else if (icon == rightSide) {
-                console.log(`computer picked icon ${icon}`);
 
-                computerpickedResult.innerHTML = rulesIcons[icon];
-                setTimeout(function () {
-                    computerpickedResult.classList.add("scale");
-                }, 1000);
-            }
-
-        }
-    }
+    ChosseScreen.classList.remove("visible");
+    resultScreen.classList.add("visible");
+    let userChoiceIcon = rulesIcons[userChoice];
+    let computerChoiceIcon = rulesIcons[computerChoice];
+    renderPlayerChoice("user", userChoiceIcon);
+    renderPlayerChoice("computer", computerChoiceIcon);
 
 }
+
+/**
+ * Renders the player's choice on the screen.
+ *
+ * @param {string} player - The player whose choice is being rendered ('user' or 'computer').
+ * @param {string} icon - The icon representing the player's choice.
+ */
+function renderPlayerChoice(player,icon){
+    let playerPickedResult = document.getElementById('user-pick-icon');
+    let timeDelay = 400;
+    
+    if(player == "computer") {
+        playerPickedResult = document.getElementById('computer-pick-icon');
+        timeDelay = 1000;
+    }
+    
+    console.log(`${player} picked icon ${icon}`);
+    playerPickedResult.innerHTML = icon;
+    setTimeout(function () {
+        playerPickedResult.classList.add("scale");
+    }, timeDelay);
+}
+
+// /**
+//  * Updates the displayed icons for the user's and computer's choices based on what they picked.
+//  * 
+//  * @param {string} leftSide - The choice made by the user.
+//  * @param {string} rightSide - The choice made by the computer.
+//  * @returns {void}
+//  */
+// function showIconsResult(leftSide, rightSide) {
+//     let userPickedResult = document.getElementById('user-pick-icon');
+//     let computerpickedResult = document.getElementById('computer-pick-icon');
+
+//     const rulesIcons = {
+//         paper: `<span class="res-icons"><i class="fa-solid fa-hand"></i></span>`,
+//         rock: `<span class="res-icons"><i class="fa-solid fa-hand-back-fist"></i></span>`,
+//         scissor: `<span class="res-icons"><i class="fa-solid fa-hand-scissors"></i></span>`,
+//         spock: `<span class="res-icons"><i class="fa-solid fa-hand-spock"></i></span>`,
+//         lizard: `<span class="res-icons"><i class="fa-solid fa-hand-lizard"></i></span>`,
+//     }
+//     for (let icon in rulesIcons) {
+//         if (rulesIcons.hasOwnProperty(leftSide) && rulesIcons.hasOwnProperty(rightSide)) {
+//             if (icon == leftSide) {
+//                 console.log(`player picked icon ${icon}`);
+//                 userPickedResult.innerHTML = rulesIcons[icon];
+//                 setTimeout(function () {
+//                     userPickedResult.classList.add("scale");
+//                 }, 400);
+//             } else if (icon == rightSide) {
+//                 console.log(`computer picked icon ${icon}`);
+
+//                 computerpickedResult.innerHTML = rulesIcons[icon];
+//                 setTimeout(function () {
+//                     computerpickedResult.classList.add("scale");
+//                 }, 1000);
+//             }
+
+//         }
+//     }
+
+// }
 
 /**
  * Resets the game state to allow the user to play again.
