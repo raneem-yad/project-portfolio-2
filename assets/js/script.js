@@ -53,8 +53,13 @@ function runGame(userChoice) {
     //'SPOCK'
     //Calculate and update the result
     let result = calculateWinnerRule(userChoice, computerChoice);
-    if (result != "draw") {
-        incrementScore(result)
+    if (result === 0) {
+        // need to be implemented
+        renderDrawresult(result);
+    }else if (result === -1){
+        incrementScore("user");
+    }else{
+        incrementScore("computer");
     }
 
     //Go to the results screen
@@ -113,11 +118,9 @@ function calculateWinnerRule(userChoice, userChoice) {
         }
         if (selectedRule.output === userChoice) {
             console.log("the winner for this round is user");
-            incrementPlayerScore();
             return -1; //this means the winner is user
         } else {
             console.log("the winner for this round is computer");
-            incrementComputerScore();
             return 1; //this means the winner is computer
         }
     }
@@ -126,31 +129,16 @@ function calculateWinnerRule(userChoice, userChoice) {
 
 
 /**
- * Increments the player's score by 1.
- * 
- * @function
- * @name incrementPlayerScore
- * @returns {void}
+ * Increments the scores by 1.
  */
-function incrementPlayerScore() {
+function incrementScore(winner) {
+    let winnerScoreElement = "user-score"
+    if (winner == "computer") {
+        winnerScoreElement = "computer-score"
+    }
 
-    let oldScore = parseInt(document.getElementById("user-score").innerText);
-    document.getElementById("user-score").innerText = ++oldScore;
-
-}
-
-/**
- * Increments the computer's score by 1.
- * 
- * @function
- * @name incrementComputerScore
- * @returns {void}
- */
-function incrementComputerScore() {
-
-    let oldScore = parseInt(document.getElementById("computer-score").innerText);
-    document.getElementById("computer-score").innerText = ++oldScore;
-
+    let oldScore = parseInt(document.getElementById(winnerScoreElement).innerText);
+    document.getElementById(winnerScoreElement).innerText = ++oldScore;
 }
 
 /**
