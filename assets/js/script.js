@@ -78,43 +78,47 @@ function computerPick() {
 }
 
 /**
- * Determines the winner of a game based on the left and right sides of the input.
- * @param {string} userChoice The choice of the User player.
- * @param {string} computerChoice The choice of the Computer.
- * @returns {void} Outputs the winner to the console.
+ * Calculates the winner of a game round based on user and computer choices.
+ *
+ * @param {string} userChoice - The choice made by the user ('ROCK', 'PAPER', 'SCISSOR', 'LIZARD', or 'SPOCK').
+ * @param {string} computerChoice - The choice made by the computer ('ROCK', 'PAPER', 'SCISSOR', 'LIZARD', or 'SPOCK').
+ * @returns {number} Returns 1 if the computer wins, -1 if the user wins, and 0 if it's a draw.
  */
-function calculateWinnerRule(userChoice, computerChoice) {
-    if (leftSide === rightSide) {
-        console.log("it's tie")
+function calculateWinnerRule(userChoice, userChoice) {
+    if (userChoice === userChoice) {
+        //it's a Draw!
+        return 0;
     } else {
         const rules = [
-            { input: ["rock", "paper"], output: "paper" },
-            { input: ["rock", "lizard"], output: "rock" },
-            { input: ["rock", "scissor"], output: "rock" },
-            { input: ["rock", "spock"], output: "spock" },
-            { input: ["lizard", "paper"], output: "lizard" },
-            { input: ["lizard", "scissor"], output: "scissor" },
-            { input: ["lizard", "spock"], output: "lizard" },
-            { input: ["paper", "scissor"], output: "scissor" },
-            { input: ["paper", "spock"], output: "paper" },
-            { input: ["scissor", "spock"], output: "spock" },
+            { input: [ROCK, PAPER], output: PAPER },
+            { input: [ROCK, LIZARD], output: ROCK },
+            { input: [ROCK, SCISSOR], output: ROCK },
+            { input: [ROCK, SPOCK], output: SPOCK },
+            { input: [LIZARD, PAPER], output: LIZARD },
+            { input: [LIZARD, SCISSOR], output: SCISSOR },
+            { input: [LIZARD, SPOCK], output: LIZARD },
+            { input: [PAPER, SCISSOR], output: SCISSOR },
+            { input: [PAPER, SPOCK], output: PAPER },
+            { input: [SCISSOR, SPOCK], output: SPOCK },
         ];
 
-        for (let rule of rules) {
-            if (rule.input.includes(leftSide) && rule.input.includes(rightSide)) {
 
-                if (rule.output === leftSide) {
-                    console.log("the winner for this round is user");
-                    incrementPlayerScore();
-                } else {
-                    console.log("the winner for this round is computer");
-                    incrementComputerScore();
-                }
+        let selectedRule = null;
+        for (let rule of rules) {
+            if (rule.input.includes(userChoice) && rule.input.includes(computerChoice)) {
+                selectedRule = rule
                 // when you find the winner just break no need to check the other rules
                 break;
-            } else {
-                // console.log("Not this rule");
             }
+        }
+        if (selectedRule.output === userChoice) {
+            console.log("the winner for this round is user");
+            incrementPlayerScore();
+            return -1; //this means the winner is user
+        } else {
+            console.log("the winner for this round is computer");
+            incrementComputerScore();
+            return 1; //this means the winner is computer
         }
     }
 
