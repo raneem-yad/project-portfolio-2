@@ -6,11 +6,11 @@ const SPOCK = "SPOCK";
 const LIZARD = "LIZARD";
 
 const CHOICE_IMAGE_MAP = {
-    PAPER: `<span class="res-icons"><i class="fa-solid fa-hand"></i></span>`,
-    ROCK: `<span class="res-icons"><i class="fa-solid fa-hand-back-fist"></i></span>`,
-    SCISSOR: `<span class="res-icons"><i class="fa-solid fa-hand-scissors"></i></span>`,
-    SPOCK: `<span class="res-icons"><i class="fa-solid fa-hand-spock"></i></span>`,
-    LIZARD: `<span class="res-icons"><i class="fa-solid fa-hand-lizard"></i></span>`,
+    PAPER: `<span class="circle"><i class="fa-solid fa-hand"></i></span>`,
+    ROCK: `<span class="circle"><i class="fa-solid fa-hand-back-fist"></i></span>`,
+    SCISSOR: `<span class="circle"><i class="fa-solid fa-hand-scissors"></i></span>`,
+    SPOCK: `<span class="circle"><i class="fa-solid fa-hand-spock"></i></span>`,
+    LIZARD: `<span class="circle"><i class="fa-solid fa-hand-lizard"></i></span>`,
 }
 
 // Wait for the DOM to finish loading before running the game
@@ -77,7 +77,7 @@ function gameTimer() {
             showFinalScore();
         }
     }
-    const interval = setInterval(updateCountdown, 200);
+    const interval = setInterval(updateCountdown, 1000);
     
 }
 function showFinalScore(){
