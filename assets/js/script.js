@@ -1,6 +1,20 @@
+// Game data structure 
+const ROCK = "rock";
+const PAPER = "paper";
+const SCISSOR = "scissor";
+const SPOCK = "spock";
+const LIZARD = "lizard";
+
+const CHOICE_IMAGE_MAP = {
+    PAPER: `<span class="res-icons"><i class="fa-solid fa-hand"></i></span>`,
+    ROCK: `<span class="res-icons"><i class="fa-solid fa-hand-back-fist"></i></span>`,
+    SCISSOR: `<span class="res-icons"><i class="fa-solid fa-hand-scissors"></i></span>`,
+    SPOCK: `<span class="res-icons"><i class="fa-solid fa-hand-spock"></i></span>`,
+    LIZARD: `<span class="res-icons"><i class="fa-solid fa-hand-lizard"></i></span>`,
+}
+
 // Wait for the DOM to finish loading before running the game
 // Get the player name from url 
-
 document.addEventListener("DOMContentLoaded", function () {
 
     getPlayerNameFromURL();
@@ -33,15 +47,15 @@ function runGame(userChoice) {
 
     let ChosseScreen = document.getElementById("choose");
     let resultScreen = document.getElementById("result");
-    //Get the user choice
-    let leftSide = userChoice;
-
+ 
     //Get the computer choice
-    let rightSide = computerPick();
-
+    let computerChoice = computerPick();
+    //'SPOCK'
     //Calculate and update the result
-    calculateWinnerRule(leftSide, rightSide);
-    // result.textContent = resultText;
+    let result = calculateWinnerRule(userChoice, computerChoice);
+    if (result != "draw") {
+        incrementScore(result)
+    }
 
     //Go to the results screen
     ChosseScreen.classList.remove("visible");
@@ -58,18 +72,18 @@ function runGame(userChoice) {
  * @returns {string} The randomly selected choice.
  */
 function computerPick() {
-    const choices = ['paper', 'rock', 'scissor', 'lizard', 'spock'];
+    const choices = Object.keys( CHOICE_IMAGE_MAP)
     let choiceIndex = Math.floor(Math.random() * 5);
     return choices[choiceIndex];
 }
 
 /**
  * Determines the winner of a game based on the left and right sides of the input.
- * @param {string} leftSide The choice of the User player.
- * @param {string} rightSide The choice of the Computer.
+ * @param {string} userChoice The choice of the User player.
+ * @param {string} computerChoice The choice of the Computer.
  * @returns {void} Outputs the winner to the console.
  */
-function calculateWinnerRule(leftSide, rightSide) {
+function calculateWinnerRule(userChoice, computerChoice) {
     if (leftSide === rightSide) {
         console.log("it's tie")
     } else {
@@ -198,17 +212,13 @@ function playAgain() {
 /**
  * Retrieves the player's name from the URL query parameters and updates the HTML elements 
  * with the class 'player-name' accordingly.
- * 
- * @function
- * @name getPlayerNameFromURL
- * @returns {void}
  */
 function getPlayerNameFromURL() {
     const urlString = window.location.href;
     let url = new URL(urlString);
-    const playerNameURL = url.searchParams.get("player-name");
+    const playerNameFromUrl = url.searchParams.get("player-name");
 
-    if (playerNameURL !== null) {
+    if (playerNameFromUrl !== null) {
         let playerNames = document.getElementsByClassName('player-name');
 
         for (playerName of playerNames) {
