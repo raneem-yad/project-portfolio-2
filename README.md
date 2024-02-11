@@ -1,39 +1,60 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1 align="center"><a name="top">Bazinga Website</a></h1>
 
-Welcome,
+[View the live project here.](https://raneem-yad.github.io/project-portfolio-2/) 
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+<p align="center"> Welcome to Bazinga, the ultimate destination for playing the famous game of Rock, Paper, Scissors, Lizard, and Spock! Inspired by Sheldon Cooper's iconic quote from The Big Bang Theory, this website offers an interactive and entertaining experience for players of all ages.</p>
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+<p align="center">Bazinga brings the popular game to life with a twist, incorporating Sheldon's favorite variations - Lizard and Spock. The website features two main pages designed to provide both amusement and engagement for users.</p>
 
-## Codeanywhere Reminders
+<h2 align="center"><img src="./readme/website-preview.png" alt="Healthy Hub Webpage on multiple devices"></h2>
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## User Experience (UX)
 
-`python3 -m http.server`
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+*   ### User stories
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+    -   ####  Visitor Goals
 
-`http_server`
+        1. As a visitor, I want to read Sheldon Cooper's famous quote from The Big Bang Theory on the homepage.
+        2. As a visitor, I want to see the different elements of the game (Rock, Paper, Scissors, Lizard, Spock) explained clearly on the homepage.
+        3. As a visitor, I want the website to be visually appealing and easy to navigate.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+    -   ####  Player Goals
+        1. As a player, I want to register for the game by providing my name and age.
+        2. As a player, I want to ensure that the registration process only accepts ages between 10 and 85.
+        3. As a player, I want to navigate to the game page from the homepage.
+        4. As a player, I want to see a timer of one minute displayed prominently on the game page.
+        5. As a player, I want to be able to select my choice (Rock, Paper, Scissors, Lizard, Spock) within the given time frame.
+        6. As a player, I want to see my choice and the computer's choice revealed after making my selection.
+        7. As a player, I want to see the result of the game (win, lose, or draw) displayed dynamically with animations.
+        8. As a player, I want to accumulate points for each game I win.
+        9. As a player, I want the option to return to the homepage or review the game rules after completing a game.
+        10. As a player, I want to receive a modal notification when the game timer runs out, displaying the final result and scores.
+        11. As a player, I want the option to return to the homepage from the modal notification.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+<br>
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+*   ### <a name="design">Design</a>
+  
+    -   #### Colour Scheme
+        -   The three main colors used are :
+            - Primary Color (#445361).
+            - Secondary Color(#0097B2).
+        
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+        These colors were selected to provide a visual appeal to the website.
 
----
 
-Happy coding!
+    -   #### Typography
+        -   Bazinga utilizes the following font styles to enhance the gaming experience:
+            -   Exo 2: This font style is chosen for its modern and sleek appearance, adding a contemporary touch to the website's text elements.
+            -   Orbitron: Orbitron font complements the gaming theme of the website with its bold and futuristic design, adding emphasis and impact to headings and titles.
+
+  
+    -   #### Imagery
+        -   While Bazinga primarily focuses on delivering an engaging gaming experience, imagery is intentionally kept minimal to maintain a clean and distraction-free interface. The website relies on colors, typography, and interactive elements to capture the attention of visitors and immerse them in the game environment.
+       
+  
+   <br>
