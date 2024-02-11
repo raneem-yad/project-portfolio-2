@@ -93,7 +93,7 @@
             </div>
             <div class="text-center">
                 <h2 id="result-text"></h2>
-                <button class="btn btn-primary" id="play-again" data-type="playAgain">PLAY AGAIN</button>
+                <button class="btn-action" id="play-again" data-type="playAgain">PLAY AGAIN</button>
             </div>
 
         </section>
@@ -118,17 +118,21 @@
             </div>
         </section>
 
-        <section class="modal">
-            <h2>Final Results</h2>
-            <div class="final-results">
+        <section class="modal final-results">
+
+            <div class="final">
+
                 <button class="close" data-type="close-modal">&times;</button>
+                <h2>Final Results</h2>
+                <hr>
                 <h3>The Winner is <span id="winner"></span></h3>
                 <p><span class="player-name">You</span>: <span class="player-final-score">0</span></p>
                 <p>Computer: <span class="computer-final-score">0</span></p>
                 <!-- control buttons -->
-                <button class="btn btn-primary" id="play-again" data-type="playAgain">Play Again</button>
-                <button class="btn btn-primary"> <a class="btn-back" href="index.html"><i
-                            class="fa-solid fa-circle-arrow-left"></i> Back To Home</a></button>
+                <button class="btn-action" id="play-again" data-type="playAgain">Play Again</button>
+                <button class="btn-action">
+                    <a href="index.html"><i class="fa-solid fa-circle-arrow-left"></i> BackTo Home</a>
+                </button>
             </div>
         </section>
 

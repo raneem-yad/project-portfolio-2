@@ -18,8 +18,12 @@ const CHOICE_IMAGE_MAP = {
 document.addEventListener("DOMContentLoaded", function () {
 
 
-    const modal = document.querySelector(".modal");
+    // const modal = document.querySelector(".modal");
     let buttons = document.getElementsByTagName('button');
+    let modal = document.getElementsByClassName("modal")[1];// the second element 
+    modal.style.display = "block";
+    modal.style.opacity = 1;
+    modal.style.zIndex = 9999;
 
     getPlayerNameFromURL();
     gameTimer();
@@ -49,8 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
 function gameTimer() {
     const startingMinutes = 1;
     let time = startingMinutes * 60;
@@ -75,11 +77,16 @@ function gameTimer() {
             clearInterval(interval);
             countdownTimer.innerHTML = "Time's up!";
             // disableControls();
-            // showFinalScore();
+            showFinalScore();
         }
     }
     const interval = setInterval(updateCountdown, 200);
     
+}
+function showFinalScore(){
+    let modal = document.getElementsByClassName("modal")[1];// the second element 
+    modal.style.display = "block";
+
 }
 
 function runGame(userChoice) {
