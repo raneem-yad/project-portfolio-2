@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const modal = document.querySelector(".modal");
     let buttons = document.getElementsByTagName('button');
- 
+
 
     getPlayerNameFromURL();
     gameTimer();
@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     break;
                 default:
                     let userChoice = this.getAttribute("data-type").toUpperCase();
-                    
                     runGame(userChoice);
             }
         });
@@ -49,21 +48,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
+/**
+ * Initializes and updates a countdown timer for a specified duration.
+ * The timer counts down starting from minutes to zero and displays the remaining time on the screen.
+ * When the timer reaches zero, it displays "Time's up!" and executes additional actions.
+ */
 function gameTimer() {
     const startingMinutes = 1;
     let time = startingMinutes * 60;
     const countdownTimer = document.getElementById('timer');
+
     function updateCountdown() {
         const minutes = Math.floor(time / 60);
         let seconds = time % 60;
 
-        if (seconds < 10) {
-            seconds = '0' + seconds; 
-        }
+        // Add leading zero to seconds if necessary
+        seconds = seconds < 10 ? '0' + seconds : seconds;
 
-        if(seconds <10 && seconds!=0){
-            countdownTimer.style.color ='red';
+        if (seconds < 10 && seconds != 0) {
+            countdownTimer.style.color = 'red';
         }
         countdownTimer.innerHTML = `${minutes}:${seconds}`;
 
@@ -73,43 +76,51 @@ function gameTimer() {
         if (time < 0) {
             clearInterval(interval);
             countdownTimer.innerHTML = "Time's up!";
-            // disableControls();
             showFinalScore();
         }
     }
-    // const interval = setInterval(updateCountdown, 1000);
-    
+    //called immediately to avoid a 1-second delay before starting the countdown/
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
 }
-function showFinalScore(){
+
+/**
+ * Displays the final score modal, showing the winner and each player's score.
+ */
+function showFinalScore() {
     let modal = document.getElementsByClassName("modal")[1];// the second element 
+    
     modal.style.display = "block";
     modal.style.opacity = 1;
     modal.style.zIndex = 9999;
 
     //get each player score 
-    let playerScore = parseInt(document.getElementById('user-score').innerText);
-    let computerScore = parseInt(document.getElementById('computer-score').innerText);
+    const playerScore = parseInt(document.getElementById('user-score').innerText);
+    const computerScore = parseInt(document.getElementById('computer-score').innerText);
 
     // cal final winner 
     let winner;
     if (playerScore == computerScore) {
         winner = "No One! it's tie";
-    }else if( playerScore> computerScore){
+    } else if (playerScore > computerScore) {
         winner = "You";
-    }else {winner = "Computer" }
+    } else { winner = "Computer" }
     // showing the winner 
     document.getElementById('winner').innerText = winner;
-    
+
     // show each player score   
     let finalUserScore = document.getElementById('player-final-score')
     let finalComputerScore = document.getElementById('computer-final-score')
-    finalUserScore.innerText =playerScore;
-    finalComputerScore.innerText =computerScore;
+    finalUserScore.innerText = playerScore;
+    finalComputerScore.innerText = computerScore;
 }
 
+/**
+ * Runs a single round of the game.
+ *
+ * @param {string} userChoice - The choice made by the user ('ROCK', 'PAPER', 'SCISSOR', 'LIZARD', or 'SPOCK').
+ */
 function runGame(userChoice) {
-
-    
     //Get the computer choice
     let computerChoice = computerPick();
     //'SPOCK' , user : rock
@@ -119,11 +130,8 @@ function runGame(userChoice) {
     if (result !== 0) { // it's not a draw!
         incrementScore(result);
     }
-
     renderResults(userChoice, computerChoice);
     renderResultAsText(result);
-
-
 }
 
 /**
@@ -208,16 +216,12 @@ function renderResults(userChoice, computerChoice) {
     const ChosseScreen = document.getElementById("choose");
     const resultScreen = document.getElementById("result");
 
-
-
     ChosseScreen.classList.remove("visible");
     resultScreen.classList.add("visible");
     let userChoiceIcon = CHOICE_IMAGE_MAP[userChoice];
     let computerChoiceIcon = CHOICE_IMAGE_MAP[computerChoice];
     renderPlayerChoice("user", userChoiceIcon);
     renderPlayerChoice("computer", computerChoiceIcon);
-
-
 }
 
 /**
