@@ -1,7 +1,3 @@
-const btnRules = document.querySelector(".btn-rules");
-const btnClose = document.querySelector(".close");
-const modal = document.querySelector(".modal");
-
 // Wait for the DOM to finish loading before running the game
 // Get the player name from url 
 
@@ -9,21 +5,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     getPlayerNameFromURL();
 
-    // Modal visibility
-    // to do 
-    btnRules.onclick = () => (modal.style.display = "block");
-    btnClose.onclick = () => (modal.style.display = "none");
-
-
-    let buttons = document.getElementsByClassName("btn");
+    const modal = document.querySelector(".modal");
+    let buttons = document.getElementsByTagName('button');
 
     for (let button of buttons) {
         button.addEventListener("click", function () {
-            if (this.getAttribute("data-type") === "playAgain") { 
-                playAgain()
-            } else {
-                let userChoice = this.getAttribute("data-type");
-                runGame(userChoice);
+            let buttonType = this.getAttribute("data-type");
+            switch (buttonType) {
+                case 'playAgain':
+                    playAgain()
+                    break;
+                case 'open-modal':
+                    modal.style.display = "block";
+                    break;
+                case 'close-modal':
+                    modal.style.display = "none";
+                    break;
+                default:
+                    let userChoice = this.getAttribute("data-type");
+                    runGame(userChoice);
             }
         });
     }
@@ -172,7 +172,7 @@ function showIconsResult(leftSide, rightSide) {
 
         }
     }
-    
+
 }
 
 /**
