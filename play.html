@@ -43,7 +43,7 @@
         <a class="btn-back" href="index.html"><i class="fa-solid fa-circle-arrow-left"></i></a>
         <!-- timmer  -->
         <div>
-            <h3>Time Left: <span id="timer">00:03</span></h3>
+            <h3>Time Left: <span id="timer">01:00</span></h3>
         </div>
         <!-- Scores and Helping section -->
         <div class="score-container">
@@ -82,7 +82,8 @@
                 <div class="pick">
                     <p>You picked</p>
                     <div id="user-pick-icon" class="pick-icon">
-                        <button class="res-icons lizard" data-type="lizard"><i class="fa-solid fa-hand-lizard"></i></button>
+                        <button class="res-icons lizard" data-type="lizard"><i
+                                class="fa-solid fa-hand-lizard"></i></button>
                     </div>
                 </div>
                 <div class="pick">
@@ -114,6 +115,20 @@
                     <li>Spock vaporizes rock</li>
                     <li>Rock crushes scisso</li>
                 </ul>
+            </div>
+        </section>
+
+        <section class="modal">
+            <h2>Final Results</h2>
+            <div class="final-results">
+                <button class="close" data-type="close-modal">&times;</button>
+                <h3>The Winner is <span id="winner"></span></h3>
+                <p><span class="player-name">You</span>: <span class="player-final-score">0</span></p>
+                <p>Computer: <span class="computer-final-score">0</span></p>
+                <!-- control buttons -->
+                <button class="btn btn-primary" id="play-again" data-type="playAgain">Play Again</button>
+                <button class="btn btn-primary"> <a class="btn-back" href="index.html"><i
+                            class="fa-solid fa-circle-arrow-left"></i> Back To Home</a></button>
             </div>
         </section>
 
