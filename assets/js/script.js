@@ -56,32 +56,38 @@ document.addEventListener("DOMContentLoaded", function () {
 function gameTimer() {
     const startingMinutes = 1;
     let time = startingMinutes * 60;
+
     const countdownTimer = document.getElementById('timer');
 
     function updateCountdown() {
         const minutes = Math.floor(time / 60);
         let seconds = time % 60;
 
-        // Add leading zero to seconds if necessary
-        seconds = seconds < 10 ? '0' + seconds : seconds;
-
-        if (seconds < 10 && seconds != 0) {
-            countdownTimer.style.color = 'red';
+        // Add leading zeros to seconds if necessary
+        if (seconds < 10) {
+            seconds = '0' + seconds;
         }
+
+        if(seconds <10 && seconds!=0){
+            countdownTimer.style.color ='red';
+        }
+
+        // Display the timer in the specified format (mm:ss)
         countdownTimer.innerHTML = `${minutes}:${seconds}`;
 
+        // Decrement time by 1 second
         time--;
 
         // Check if time has run out
         if (time < 0) {
             clearInterval(interval);
             countdownTimer.innerHTML = "Time's up!";
-            showFinalScore();
+             showFinalScore();
         }
     }
-    //called immediately to avoid a 1-second delay before starting the countdown/
+
     updateCountdown();
-    setInterval(updateCountdown, 1000);
+    const interval = setInterval(updateCountdown, 1000);
 }
 
 /**
@@ -89,7 +95,7 @@ function gameTimer() {
  */
 function showFinalScore() {
     let modal = document.getElementsByClassName("modal")[1];// the second element 
-    
+
     modal.style.display = "block";
     modal.style.opacity = 1;
     modal.style.zIndex = 9999;
