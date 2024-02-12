@@ -6,7 +6,7 @@
 
 <p align="center">Bazinga brings the popular game to life with a twist, incorporating Sheldon's favorite variations - Lizard and Spock. The website features two main pages designed to provide both amusement and engagement for users.</p>
 
-<h2 align="center"><img src="./readme/website-preview.png" alt="Healthy Hub Webpage on multiple devices"></h2>
+<h2 align="center"><img src="./readme/website-preview.png" alt="Bazinga Webpage on multiple devices"></h2>
 
 ## User Experience (UX)
 
@@ -58,3 +58,101 @@
        
   
    <br>
+
+
+*   ### <a name="wireframes">Wireframes</a>
+    -   Home Page Wireframe
+              <img src="./readme/wireframe_index.png" alt="wireframe for the home page">
+       
+    -   Play Page Wireframe
+              <img src="./readme/wireframe_index.png" alt="wireframe for the playing page">
+ 
+      The mockups may differ slightly from the actual website as certain features were added, modified, or removed during discussions and implementation.
+     
+    
+
+<br>
+
+
+## Features
+
+### Sitewide
+* Logo
+     * The website features a distinctive logo that represents the Bazinga brand and enhances brand recognition across the site.
+
+
+![Logo](./readme/logo.png)
+
+* Favicon
+    * The Website has Favicon which will provide an image in the the tabs header to allow the user to easily identify the website if they have multiple tabs open.
+
+![Favicon](./readme/favicon.png)
+
+
+### Landing Page
+* The landing page prominently displays Sheldon Cooper's quote from The Big Bang Theory, adding a touch of humor and familiarity for visitors.
+* Visitors can explore a detailed explanation of the game elements, including Rock, Paper, Scissors, Lizard, and Spock, to understand the game mechanics.
+* A user-friendly registration form allows players to sign up by providing their name and age, ensuring a personalized gaming experience.
+    
+
+![Landing Page](./readme/landing_page.png)
+
+### Playing Page
+* The playing page features a timer functionality, adding excitement and challenge to the gameplay with a one-minute countdown, when the time is less than 10, it turns to red color to make the user pay more attention.
+
+  ![Playing the Game Page](./readme/playing.png)
+* Real-time updates of the player's and computer's choices are displayed dynamically during gameplay, enhancing user engagement.
+
+  ![During the Game](./readme/showing.png)
+* Animated transitions and effects accompany the reveal of game results, providing an immersive gaming experience.
+The website tracks and displays scores for each player, adding a competitive element to the gameplay.
+
+ ![Result Page](./readme/result.png)
+    
+
+
+###   Responsive on all device sizes
+
+- Bazinga is designed to be fully responsive, ensuring optimal viewing and functionality across various devices, including desktops, tablets, and smartphones.
+  
+
+###   Interactive elements
+
+- Gameplay Interaction: Players can actively participate in the game by selecting their choice (Rock, Paper, Scissors, Lizard, Spock) within the given time frame. This interaction drives the core gameplay experience.
+
+- Real-time Updates: The website dynamically updates and displays the player's and computer's choices during gameplay, keeping users informed and engaged with the evolving game state.
+- Animated Transitions: Animated transitions and effects accompany the reveal of game results, adding excitement and visual interest to the gaming experience.
+- User Registration: The registration form on the landing page allows users to sign up by providing their name and age, facilitating personalized interactions within the gaming environment.
+- Score Tracking: Bazinga tracks and displays scores for each player, providing feedback and motivation for continued engagement and improvement.
+
+###   Future Features
+- Continued development may include integration of social media sharing options to allow players to challenge friends and share their gaming experiences.
+- Enhanced user profiles with customizable avatars could be introduced to add a personal touch to the gaming experience.
+- Implementation of leaderboards to showcase top players and their scores may be considered to foster competition and community engagement.
+
+
+## Technologies Used
+
+### Languages Used
+
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+
+### Frameworks, Libraries & Programs Used
+
+1. [Google Fonts:](https://fonts.google.com/)
+    - Google fonts were used to import the 'Titillium Web' font into the style.css file which is used on all pages throughout the project.
+2. [Font Awesome:](https://fontawesome.com/)
+    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
+3. [Git](https://git-scm.com/)
+    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+4. [GitHub:](https://github.com/)
+    - GitHub is used to store the project's code after being pushed from Git.
+5. [balsamiq:](https://balsamiq.com/)
+    - Balsamiq was used to create the wireframes.
+6. [VS Code:](https://code.visualstudio.com/)
+    - Visual Studio Code was used as IDE.
+      
+
+<br>
