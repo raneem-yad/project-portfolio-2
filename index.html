@@ -3,6 +3,7 @@
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Meta tag to search Engine Optimization -->
     <meta name="language" content="english">
@@ -57,7 +58,9 @@
 
             <!-- game preview -->
             <div id="game-preview">
-                <h2>Game Preview</h2>
+                <h2>Game Options Preview</h2>
+                <p>This is an overview of the game's options. Once you click <strong>Play</strong> and choose one of
+                    them, the game will start automatically.</p>
                 <div id="circles">
                     <div class="circle">
                         <i class="fa-solid fa-hand"></i>
@@ -84,8 +87,8 @@
                 <form action="play.html" method="get">
                     <input type="text" name="player-name" id="player" placeholder="Player Name" class="text-input"
                         required>
-                    <input type="number" name="player-age" id="age" placeholder="Player Age" class="text-input"
-                        required min="10" max="85">
+                    <input type="number" name="player-age" id="age" placeholder="Player Age" class="text-input" required
+                        min="10" max="85">
                     <!-- <input type="button"  value="Play"> -->
                     <button type="submit" class="btn-play">Play</button>
                 </form>

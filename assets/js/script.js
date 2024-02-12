@@ -183,10 +183,8 @@ function calculateWinnerRule(userChoice, computerChoice) {
             }
         }
         if (selectedRule.output === userChoice) {
-            console.log("the winner for this round is user");
             return -1; //this means the winner is user
         } else {
-            console.log("the winner for this round is computer");
             return 1; //this means the winner is computer
         }
     }
@@ -302,7 +300,5 @@ function getPlayerNameFromURL() {
         for (let playerName of playerNames) {
             playerName.innerHTML = playerNameFromUrl;
         }
-    } else {
-        console.log("playerName not found in URL");
     }
 }

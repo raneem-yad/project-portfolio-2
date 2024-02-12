@@ -26,7 +26,6 @@ button {
 
 /* Home content  */
 main {
-    /* background: url('../images/bg3.png') no-repeat center center / cover; */
     flex: 1 0 auto;
     background: linear-gradient(0deg, #0099b23d, transparent);
     /* Enable flex properties for child elements */
@@ -62,6 +61,10 @@ blockquote p::after {
     margin: 20px 0;
 }
 
+#game-preview p{
+    margin: 10px 0;
+}
+
 #circles {
     margin: 5px 0;
 }
@@ -89,7 +92,6 @@ blockquote p::after {
 }
 
 /* registration form */
-
 .text-input {
     background: transparent;
     color: #007084;
@@ -100,8 +102,6 @@ blockquote p::after {
     border-radius: 2px;
     padding: 0 5px;
 }
-
-
 
 input::placeholder {
     color: #007084;
@@ -121,14 +121,7 @@ input::placeholder {
     font-size: 1.5rem;
     border-radius: 4px;
     transition: all 1s ease;
-    /* text-transform: uppercase; */
-    /* font-weight: bold; */
-    /* letter-spacing: 1px; */
-    /* text-align: center; */
     cursor: pointer;
-    /* text-decoration: none; */
-    /* transition: background-color 0.3s ease; */
-    /* box-shadow: 5px 5px 10px rgba(0, 151, 178, 0.5);*/
 }
 
 .btn-play:hover {
@@ -187,7 +180,6 @@ input::placeholder {
     padding: 0 7px;
     box-sizing: border-box;
     margin: auto;
-    /* transition: opacity 0.3s 0.5s; */
 }
 
 .visible {
@@ -379,10 +371,7 @@ input::placeholder {
     margin: 10px 0;
 }
 
-
-
 /* adding media-query */
-
 @media screen and (min-width: 440px) {
     .play {
         max-width: 440px;
@@ -499,10 +488,6 @@ input::placeholder {
     #game-rules {
         width: 33.3%;
     }
-
-    /* #game-preview {
-        order: unset;
-    } */
 
     #game-registration {
         width: 33.3%;

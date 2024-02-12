@@ -3,6 +3,7 @@
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Meta tag to search Engine Optimization -->
     <meta name="language" content="english">
@@ -39,8 +40,6 @@
             <img id="logo" src="assets/images/logo.webp" alt="website logo">
 
         </div>
-        <!-- back to home button -->
-        <a class="btn-back" href="index.html"><i class="fa-solid fa-circle-arrow-left"></i></a>
         <!-- timmer  -->
         <div>
             <h3>Time Left: <span id="timer">01:00</span></h3>
@@ -61,17 +60,15 @@
             </div>
         </div>
 
-
-
         <!-- chosing area -->
         <section class="play visible" id="choose">
-            <h2>pick your choice <span class="player-name">Player Name</span>!</h2>
+            <h2>pick your choice <span class="player-name">Player</span>!</h2>
             <div class="btns">
-                <button class="circle paper" data-type="choose" data-play="paper"><i class="fa-solid fa-hand"></i></button>
-                <button class="circle rock" data-type="choose" data-play="rock"><i class="fa-solid fa-hand-back-fist"></i></button>
-                <button class="circle scissor" data-type="choose" data-play="scissor"><i class="fa-solid fa-hand-scissors"></i></button>
-                <button class="circle lizard" data-type="choose" data-play="lizard"><i class="fa-solid fa-hand-lizard"></i></button>
-                <button class="circle spock" data-type="choose" data-play="spock"><i class="fa-solid fa-hand-spock"></i></button>
+                <button class="circle paper" data-type="choose" data-play="paper" aria-label="paper"><i class="fa-solid fa-hand"></i></button>
+                <button class="circle rock" data-type="choose" data-play="rock" aria-label="rock"><i class="fa-solid fa-hand-back-fist"></i></button>
+                <button class="circle scissor" data-type="choose" data-play="scissor" aria-label="scissor"><i class="fa-solid fa-hand-scissors"></i></button>
+                <button class="circle lizard" data-type="choose" data-play="lizard" aria-label="lizard"><i class="fa-solid fa-hand-lizard"></i></button>
+                <button class="circle spock" data-type="choose" data-play="spock" aria-label="spock"><i class="fa-solid fa-hand-spock"></i></button>
             </div>
         </section>
 
