@@ -62,10 +62,10 @@
 
 *   ### <a name="wireframes">Wireframes</a>
     -   Home Page Wireframe
-              <img src="./readme/wireframe_index.png" alt="wireframe for the home page">
+               <img src="./readme/wireframe_index.png" width="660px" alt="wireframe for the home page">
        
     -   Play Page Wireframe
-              <img src="./readme/wireframe_index.png" alt="wireframe for the playing page">
+              <img src="./readme/wireframe_play.png" width="660px" alt="wireframe for the playing page">
  
       The mockups may differ slightly from the actual website as certain features were added, modified, or removed during discussions and implementation.
      
@@ -107,7 +107,9 @@
 * Animated transitions and effects accompany the reveal of game results, providing an immersive gaming experience.
 The website tracks and displays scores for each player, adding a competitive element to the gameplay.
 
- ![Result Page](./readme/result.png)
+* When the Time is up, a popup window will show the final results
+  <h2><img src="./readme/result.png" width="460px" alt="final results popup"></h2>
+
     
 
 
@@ -164,33 +166,32 @@ The website tracks and displays scores for each player, adding a competitive ele
 html-validator.png
 1. The W3C Markup Validator and W3C CSS Validator services were used to validate every page of the project to ensure there were no syntax errors in the project.
     - [W3C Markup Validator](https://validator.w3.org/#validate_by_input) - [Results: index.html Page]
-      <h2><img src="./readme/html_index_validator.png" alt="The W3C Markup Validator and W3C CSS Validator"></h2>
+      <h2><img src="./readme/html_index_validator.png" width="860px" alt="The W3C Markup Validator and W3C CSS Validator"></h2>
       
     - [W3C Markup Validator](https://validator.w3.org/#validate_by_input) - [Results: play.html Page]
-      <h2><img src="./readme/html_play_validator.png" alt="The W3C Markup Validator and W3C CSS Validator"></h2>
+      <h2><img src="./readme/html_play_validator.png" width="860px" alt="The W3C Markup Validator and W3C CSS Validator"></h2>
 
     - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results: index.html Page]
-    <h2><img src="./readme/css_index_validator.png" alt="The W3C Markup Validator and W3C CSS Validator"></h2>
+    <h2><img src="./readme/css_index_validator.png" width="860px" alt="The W3C Markup Validator and W3C CSS Validator"></h2>
     
     - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results: play.html Page]
-    <h2><img src="./readme/css_play_validator.png" alt="The W3C Markup Validator and W3C CSS Validator"></h2>
+    <h2><img src="./readme/css_play_validator.png" width="860px" alt="The W3C Markup Validator and W3C CSS Validator"></h2>
 
 2. JSHint, a JavaScript Code Quality Tool:
     - JSHint is a static code analysis tool used in software development for checking if JavaScript source code complies with coding rules.
-    <h2><img src="./readme/js_validator.png" alt="JSHint, a JavaScript Code Quality Tool"></h2>
+    <h2><img src="./readme/js_validator.png" width="860px" alt="JSHint, a JavaScript Code Quality Tool"></h2>
     
 3. Resolution and Scaling were tested with Google Dev tools on Galaxy Fold, 280px to ensure the website works flawlessly on all resolutions 280px and above.
-      - Galaxy Fold resolution - [view](https://github.com/raneem-yad/project-portfolio-1/assets/156793552/5dd02925-3552-4b77-a3c0-557101f2b6f6)
-      - iPad Air - [view](https://github.com/raneem-yad/project-portfolio-1/assets/156793552/216d64c7-d79a-4e9a-9db6-dcc14891b86f)
+
       - For a view of the Page on different devices, the Picture at the [Top](#top) of the Page has a good overview. The following are examples of resolution screenshots, emulating different sizes on Google Chrome/Mac OS.
         1.  Landing Page iPad Resolution
-            <h2><img src="./readme/res_index_ipad.png"  alt="Picture of the page on Tablet Resolution"></h2><br>
+            <h2><img src="./readme/res_index_ipad.png"  width="260px"   alt="Picture of the page on Tablet Resolution"></h2><br>
         2.  Playing Page iPad Resolution
-            <h2><img src="./readme/res_play_ipad.png"  alt="Picture of the page on Tablet Resolution"></h2><br>
+            <h2><img src="./readme/res_play_ipad.png"  width="260px"  alt="Picture of the page on Tablet Resolution"></h2><br>
         3.  Landing Page Phone Resolution
-            <h2><img src="./readme/res_index.png" alt="Picture of the page on Phone Resolution"></h2><br>
+            <h2><img src="./readme/res_index.png" width="260px"  alt="Picture of the page on Phone Resolution"></h2><br>
         4.  Playing Page Phone Resolution
-            <h2><img src="./readme/res_play.png" alt="Picture of the page on Phone Resolution"></h2><br>
+            <h2><img src="./readme/res_play.png" width="260px"  alt="Picture of the page on Phone Resolution"></h2><br>
             
 
 
@@ -206,13 +207,13 @@ html-validator.png
 
 1. Results
 - Desktop-index.html:
-  <h2><img src="./readme/index_light.png" alt="Results of Google Lighthouse test for Desktop devices"></h2>
+  <h2><img src="./readme/index_light.png" width="460px" alt="Results of Google Lighthouse test for Desktop devices"></h2>
 - Desktop-index.html:
-  <h2><img src="./readme/play_light.png.png" alt="Results of Google Lighthouse test for Desktop devices"></h2>
+  <h2><img src="./readme/play_light.png" width="460px" alt="Results of Google Lighthouse test for Desktop devices"></h2>
 - Mobile-index.html:
-  <h2><img src="./readme/index_light_phone.png" alt="Results of Google Lighthouse test for Mobile devices"></h2>
-- Mobile-index.html:
-  <h2><img src="./readme/play_light_phone.png" alt="Results of Google Lighthouse test for Mobile devices"></h2>
+  <h2><img src="./readme/index_light_phone.png" width="460px" alt="Results of Google Lighthouse test for Mobile devices"></h2>
+- Mobile-play.html:
+  <h2><img src="./readme/play_light_phone.png" width="460px" alt="Results of Google Lighthouse test for Mobile devices"></h2>
 
 
 <br>
@@ -283,5 +284,4 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 ### Acknowledgements
 
 -   My Mentor for continuous helpful feedback.
--   My Peers in Code Institute's Slack channel for their feedback.
 -   My husband for supporting me the whole time.
