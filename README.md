@@ -156,3 +156,132 @@ The website tracks and displays scores for each player, adding a competitive ele
       
 
 <br>
+
+## Testing
+
+### General Testing
+
+html-validator.png
+1. The W3C Markup Validator and W3C CSS Validator services were used to validate every page of the project to ensure there were no syntax errors in the project.
+    - [W3C Markup Validator](https://validator.w3.org/#validate_by_input) - [Results: index.html Page]
+      <h2><img src="./readme/html_index_validator.png" alt="The W3C Markup Validator and W3C CSS Validator"></h2>
+      
+    - [W3C Markup Validator](https://validator.w3.org/#validate_by_input) - [Results: play.html Page]
+      <h2><img src="./readme/html_play_validator.png" alt="The W3C Markup Validator and W3C CSS Validator"></h2>
+
+    - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results: index.html Page]
+    <h2><img src="./readme/css_index_validator.png" alt="The W3C Markup Validator and W3C CSS Validator"></h2>
+    
+    - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results: play.html Page]
+    <h2><img src="./readme/css_play_validator.png" alt="The W3C Markup Validator and W3C CSS Validator"></h2>
+
+2. JSHint, a JavaScript Code Quality Tool:
+    - JSHint is a static code analysis tool used in software development for checking if JavaScript source code complies with coding rules.
+    <h2><img src="./readme/js_validator.png" alt="JSHint, a JavaScript Code Quality Tool"></h2>
+    
+3. Resolution and Scaling were tested with Google Dev tools on Galaxy Fold, 280px to ensure the website works flawlessly on all resolutions 280px and above.
+      - Galaxy Fold resolution - [view](https://github.com/raneem-yad/project-portfolio-1/assets/156793552/5dd02925-3552-4b77-a3c0-557101f2b6f6)
+      - iPad Air - [view](https://github.com/raneem-yad/project-portfolio-1/assets/156793552/216d64c7-d79a-4e9a-9db6-dcc14891b86f)
+      - For a view of the Page on different devices, the Picture at the [Top](#top) of the Page has a good overview. The following are examples of resolution screenshots, emulating different sizes on Google Chrome/Mac OS.
+        1.  Landing Page iPad Resolution
+            <h2><img src="./readme/res_index_ipad.png"  alt="Picture of the page on Tablet Resolution"></h2><br>
+        2.  Playing Page iPad Resolution
+            <h2><img src="./readme/res_play_ipad.png"  alt="Picture of the page on Tablet Resolution"></h2><br>
+        3.  Landing Page Phone Resolution
+            <h2><img src="./readme/res_index.png" alt="Picture of the page on Phone Resolution"></h2><br>
+        4.  Playing Page Phone Resolution
+            <h2><img src="./readme/res_play.png" alt="Picture of the page on Phone Resolution"></h2><br>
+            
+
+
+5. Registration Form Test :
+   - Manual Testing: Each field of the registration form was manually tested to verify its usability and responsiveness across different devices and screen sizes.
+   - Input Validation Testing: The form was tested to validate that it correctly accepts and rejects inputs according to specified criteria. For example, ensuring that only numeric characters are accepted in the age field and that the age provided is within the acceptable range (between 10 and 85 years).
+
+
+<br>
+
+
+### Google Lighthouse Testing
+
+1. Results
+- Desktop-index.html:
+  <h2><img src="./readme/index_light.png" alt="Results of Google Lighthouse test for Desktop devices"></h2>
+- Desktop-index.html:
+  <h2><img src="./readme/play_light.png.png" alt="Results of Google Lighthouse test for Desktop devices"></h2>
+- Mobile-index.html:
+  <h2><img src="./readme/index_light_phone.png" alt="Results of Google Lighthouse test for Mobile devices"></h2>
+- Mobile-index.html:
+  <h2><img src="./readme/play_light_phone.png" alt="Results of Google Lighthouse test for Mobile devices"></h2>
+
+
+<br>
+
+### Further Testing
+
+-   The Website was tested on Google Chrome,  Microsoft Edge, Firefox and Safari browsers.
+-   The Website was viewed on a variety of devices such as Desktop, Laptop, iPad and different Android and iOS Phones.
+-   Testing was done to ensure that all pages working correctly.
+-   Friends were asked to review the site to point out any bugs and/or user experience issues.
+
+<br>
+
+
+## Deployment
+
+### GitHub Pages
+
+The project was deployed to GitHub Pages using the following steps...
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/raneem-yad/project-portfolio-2)
+2. At the top of the Repository (not the top of the page), locate the "Settings" Button on the menu.
+3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
+4. Under "Source", click the drop-down called "None" and select "Main Branch".
+5. The page will automatically refresh.
+6. Scroll back down through the page to locate the now published site [link](https://raneem-yad.github.io/project-portfolio-2/) in the "GitHub Pages" section.
+
+### Forking the GitHub Repository
+
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/raneem-yad/project-portfolio-2)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. You should now have a copy of the original repository in your GitHub account.
+
+### Making a Local Clone
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/raneem-yad/project-portfolio-2)
+2. Under the repository name, click "Clone or download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, and then paste the URL you copied in Step 3.
+7. Press Enter. Your local clone will be created.
+
+Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+
+<br>
+
+## Credits
+
+### Project Inspiration: 
+
+-   The concept and idea for this project were inspired by the popular television series The Big Bang Theory, particularly drawing from the iconic references to the game of Rock, Paper, Scissors, Lizard, Spock made by the character Sheldon Cooper.
+
+
+
+
+### Images and Media
+-   The website logo was also created by [Developer:Raneem](https://linkedin.com/in/raneem-yad).
+-   After creating the logo images were converted to favicon using [Favicon converter](https://favicon.io/favicon-converter/)
+ 
+
+### Readme
+
+-   The Basic Structure of the Readme was taken from [Code Institute's Sample Readme](https://github.com/Code-Institute-Solutions/SampleREADME/blob/master/README.md).
+
+### Acknowledgements
+
+-   My Mentor for continuous helpful feedback.
+-   My Peers in Code Institute's Slack channel for their feedback.
+-   My husband for supporting me the whole time.
