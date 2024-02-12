@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 // Game data structure 
 const ROCK = "ROCK";
 const PAPER = "PAPER";
@@ -11,7 +12,7 @@ const CHOICE_IMAGE_MAP = {
     SCISSOR: `<span class="circle"><i class="fa-solid fa-hand-scissors"></i></span>`,
     SPOCK: `<span class="circle"><i class="fa-solid fa-hand-spock"></i></span>`,
     LIZARD: `<span class="circle"><i class="fa-solid fa-hand-lizard"></i></span>`,
-}
+};
 
 // Wait for the DOM to finish loading before running the game
 document.addEventListener("DOMContentLoaded", function () {
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let buttonType = this.getAttribute("data-type");
             switch (buttonType) {
                 case 'playAgain':
-                    playAgain()
+                    playAgain();
                     break;
                 case 'open-modal':
                     modal.style.display = "block";
@@ -108,13 +109,13 @@ function showFinalScore() {
         winner = "No One! it's tie";
     } else if (playerScore > computerScore) {
         winner = "You";
-    } else { winner = "Computer" }
+    } else { winner = "Computer"; }
     // showing the winner 
     document.getElementById('winner').innerText = winner;
 
     // show each player score   
-    let finalUserScore = document.getElementById('player-final-score')
-    let finalComputerScore = document.getElementById('computer-final-score')
+    let finalUserScore = document.getElementById('player-final-score');
+    let finalComputerScore = document.getElementById('computer-final-score');
     finalUserScore.innerText = playerScore;
     finalComputerScore.innerText = computerScore;
 }
@@ -142,7 +143,7 @@ function runGame(userChoice) {
  * @returns {string} The randomly selected choice.
  */
 function computerPick() {
-    const choices = Object.keys(CHOICE_IMAGE_MAP)
+    const choices = Object.keys(CHOICE_IMAGE_MAP);
     let choiceIndex = Math.floor(Math.random() * 5);
     return choices[choiceIndex];
 }
@@ -176,7 +177,7 @@ function calculateWinnerRule(userChoice, computerChoice) {
         let selectedRule = null;
         for (let rule of rules) {
             if (rule.input.includes(userChoice) && rule.input.includes(computerChoice)) {
-                selectedRule = rule
+                selectedRule = rule;
                 // when you find the winner just break no need to check the other rules
                 break;
             }
@@ -199,9 +200,9 @@ function calculateWinnerRule(userChoice, computerChoice) {
  * @param {number} winner - The winner of the game round. 1 represents the computer, -1 represents the user.
  */
 function incrementScore(winner) {
-    let winnerScoreElement = "user-score"
+    let winnerScoreElement = "user-score";
     if (winner === 1) {
-        winnerScoreElement = "computer-score"
+        winnerScoreElement = "computer-score";
     }
 
     let oldScore = parseInt(document.getElementById(winnerScoreElement).innerText);
@@ -258,11 +259,11 @@ function renderResultAsText(result) {
 
     const resultText = document.getElementById("result-text");
     if (result == -1) {
-        resultText.innerHTML = "You Win!"
+        resultText.innerHTML = "You Win!";
     } else if (result == 1) {
-        resultText.innerHTML = "Computer Win!"
+        resultText.innerHTML = "Computer Win!";
     } else {
-        resultText.innerHTML = "It's Draw!"
+        resultText.innerHTML = "It's Draw!";
     }
 }
 
